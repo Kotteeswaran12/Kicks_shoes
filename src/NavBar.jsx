@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import './NavBar.css';
-import HarmMenu from './assets/navbar/heroicons_bars-3-20-solid.png'
+import HarmMenu from './assets/navbar/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.png'
 import searchIcon from './assets/navbar/Search.png'
-import Person from './assets/navbar/Icon.png'
+import Person from './assets/navbar/person_24dp_000000_FILL1_wght400_GRAD0_opsz24.png'
 import SideBar from './SideBar'
+import { GoPersonFill } from "react-icons/go";
 const NavBar = () => {
-    const [menu, setMenu] = useState(true);
+    const [menu, setMenu] = useState(false);
     return (
 
         <nav>
@@ -27,13 +28,13 @@ const NavBar = () => {
                 </div>
                 <div className="box">
                     <img src={searchIcon} alt="" width="20px" />
-                    <img src={Person} alt="" />
+                    <GoPersonFill />
                     <div className="count">
                         0
                     </div>
                 </div>
             </div>
-            <SideBar setMenu={setMenu} menu={menu}/>
+            <SideBar setMenu={setMenu} menu={menu} />
         </nav>
 
 

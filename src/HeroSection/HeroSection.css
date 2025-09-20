@@ -1,0 +1,468 @@
+:root {
+    --violet: #4A69E2;
+    --font1: "Roboto", sans-serif;
+    --font2: "Poppins", sans-serif;
+}
+
+.Outer {
+
+    text-align: center;
+    margin: 0px 10%;
+
+    height: 100vh;
+    font-family: var(--font2);
+
+    /* overflow: hidden; */
+}
+
+.Outer>h1 {
+    width: 100%;
+    /* background-color: ; */
+    font-size: 5.5em;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.Outer>h1>span {
+    color: var(--violet);
+}
+
+.Outer>.main {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.Outer>.main>img {
+    width: 100%;
+    min-width: 400px;
+    min-height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+
+}
+
+.Outer>.main>.smlImg {
+    position: absolute;
+    width: 150px;
+    height: 290px;
+
+    /* background-color: red; */
+    bottom: 10%;
+    right: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+/* ! content in img */
+.Outer>.main>.content {
+    color: white;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.Outer>.main>.content>h1 {
+
+    font-size: 5rem;
+}
+
+.Outer>.main>.content>p {
+    font-size: 1.2rem;
+}
+
+.Outer>.main>.content>button {
+    padding: 20px 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    /* background-color: var(--violet); */
+    background-color: #4A69E2;
+    color: white;
+    cursor: pointer;
+    /* transition: transform 2s ease-in-out; */
+}
+
+/* ! Small images in floating */
+.Outer>.main>.smlImg>img {
+    width: 100%;
+    object-fit: cover;
+    /* background-color: red; */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: float 5s ease-in-out infinite alternate;
+}
+
+
+.Outer>.main>.smlImg>img:hover {
+    animation-play-state: paused;
+}
+
+
+/* ! Side content */
+.Outer>.main>.sideContent {
+    height: 80px;
+    width: 300px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 25%;
+    /* border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    left: -5.2%;
+    rotate: 90deg;
+    text-align: center;
+    transition: all 600ms ease-in;
+    transform: translate(0px, 110px);
+}
+
+.Outer>.main:hover>.sideContent {
+    transform: translate(0px, 0%);
+}
+
+.Outer>.main>.sideContent>p {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    font-size: 1.2rem;
+    /* flex-direction: column; */
+
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0px, -10px);
+    }
+
+
+    100% {
+        transform: translate(10px);
+    }
+}
+
+@media (max-width:1054px) {
+    .Outer>h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width:1045px) {
+
+    .Outer>.main:hover>.sideContent {
+        transform: translate(13px, 45px);
+    }
+
+    .Outer>.main>.sideContent {
+        width: 250px;
+        height: 50px;
+    }
+
+    .Outer>.main>.sideContent>p {
+        font-size: 0.9rem;
+
+    }
+
+}
+
+
+@media (max-width:1716px) {
+    .Outer>.main>.sideContent {
+        left: -8%;
+    }
+
+    .Outer>.main>.smlImg {
+        bottom: -0%;
+    }
+
+    .Outer>.main>.smlImg>img {
+        width: 80%;
+
+    }
+
+    /* .Outer>.main>.content {
+        color: white;
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        } */
+
+    .Outer>.main>.content>h1 {
+        font-size: 4rem;
+    }
+
+    .Outer>.main>.content>p {
+        font-size: 1.01rem;
+    }
+
+    .Outer>.main>.content>button {
+        padding: 15px 50px;
+
+    }
+}
+
+@media (max-width:1716px) {
+    .Outer>.main>.sideContent {
+        left: -9%;
+        /* width:  300px; */
+        /* display: none; */
+    }
+
+    .Outer>.main>.smlImg {
+        bottom: -5%;
+    }
+
+    .Outer>.main>.smlImg>img {
+        width: 70%;
+
+    }
+
+    .Outer>.main>.content>h1 {
+        font-size: 3.5rem;
+    }
+
+    .Outer>.main>.content>p {
+        font-size: 0.8rem;
+    }
+
+    .Outer>.main>.content>button {
+        padding: 15px 50px;
+
+    }
+}
+@media (min-width:943px) {
+      .Outer>.main>.sideContent {
+        top: 30%;
+      }
+    
+    .Outer>.main:hover>.sideContent {
+        transform: translate(0px, 30px);
+    }
+}
+@media (max-width:925px) {
+    .Outer>.main>.content>h1 {
+        font-size: 2.5rem;
+    }
+
+    .Outer>.main>.content>p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width:910px) {
+    .Outer>.main>.smlImg {
+        bottom: -25%;
+        right: -5%;
+    }
+
+    .Outer>.main>.smlImg>img {
+        width: 50%;
+
+    }
+
+}
+
+@media (max-width:765px) {
+    .Outer>.main>.sideContent {
+
+        width: 250px;
+        height: 50px;
+        /* top: 30%;
+        left: -7%; */
+        /* transform: translate(0px ,200px); */
+        padding: 10px 10px;
+        /* background: red; */
+    }
+
+    .Outer>.main:hover>.sideContent {
+        transform: translate(13px, 45px);
+    }
+
+    .Outer>.main>.sideContent>p {
+        font-size: 1rem;
+
+    }
+
+    .Outer>.main>.content>h1 {
+        font-size: 2rem;
+    }
+
+    .Outer>.main>.content>p {
+        font-size: 0.5rem;
+    }
+
+    .Outer>.main>.content>button {
+        padding: 10px 40px;
+
+    }
+}
+
+@media (max-width:671px) {
+    .Outer>.main>.sideContent {
+        top: 30%;
+    }
+
+    .Outer>.main:hover>.sideContent {
+        transform: translate(0px, 55px);
+    }
+
+}
+
+
+@media (max-width:530px) {
+    .Outer {
+        margin: 0px 5%;
+    }
+
+    .Outer>.main>.sideContent {
+        width: 250px;
+        height: 50px;
+        padding: 0px 0px;
+
+    }
+
+    .Outer>.main>.sideContent>p {
+        font-size: 0.9rem;
+    }
+
+    .Outer>.main:hover>.sideContent {
+        transform: translate(0px, 60px);
+    }
+
+    .Outer>.main>.smlImg {
+        bottom: -25%;
+        right: -10%;
+    }
+
+    .Outer>.main>.smlImg>img {
+        width: 50%;
+
+    }
+
+    .Outer>.main>.content>h1 {
+        font-size: 2rem;
+    }
+
+    .Outer>.main>.content>p {
+        font-size: 0.5rem;
+    }
+
+    .Outer>.main>.content>button {
+        padding: 10px 40px;
+
+    }
+}
+
+@media (max-width:500px) {
+
+    .Outer>.main>img {
+        min-width: 250px;
+
+
+    }
+}
+
+
+@media (max-width:475px) {
+    .Outer>.main>.smlImg {
+        bottom: -25%;
+        right: -10%;
+    }
+
+    .Outer>.main>.smlImg>img {
+        width: 50%;
+
+    }
+
+    .Outer>.main>.content>h1 {
+        font-size: 1.5rem;
+    }
+
+    .Outer>.main>.content>p {
+        font-size: 0.4rem;
+    }
+
+    .Outer>.main>.content>button {
+        padding: 10px 30px;
+        font-size: 10px;
+
+    }
+}
+
+
+@media (max-width:469px) {
+    .Outer>h1 {
+
+        font-size: 2.5rem;
+    }
+
+    .Outer>.main>.sideContent {
+        left: -15%;
+    }
+
+    .Outer>.main:hover>.sideContent {
+        transform: translate(0px, 40px);
+        /* background-color: red; */
+    }
+}
+@media (max-width:400px) {
+     .Outer>.main:hover>.sideContent {
+        transform: translate(0px, 50px);
+        /* background-color: red; */
+    }
+}
+
+@media (max-width:344px) {
+    .Outer>.main>.smlImg {
+        bottom: -40%;
+        right: -30%;
+    }
+
+    .Outer>.main>.smlImg>img {
+        width: 30%;
+
+    }
+
+    .Outer>.main>.content>h1 {
+        font-size: 1rem;
+    }
+
+    .Outer>.main>.content>p {
+        font-size: 4.5px;
+    }
+
+    .Outer>.main>.content>button {
+        padding: 10px 30px;
+        font-size: 10px;
+
+    }
+
+    .Outer>.main>.sideContent {
+        width: 240px;
+        height: 50px;
+        padding: 0px 0px;
+        left: -14%;
+    }
+
+    .Outer>.main>.sideContent>p {
+        font-size: 0.8rem;
+    }
+     .Outer>.main:hover>.sideContent {
+        transform: translate(0px, 55px);
+        /* background-color: red; */
+    }
+}
