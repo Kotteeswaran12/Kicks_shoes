@@ -1,0 +1,411 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+:root {
+    --btncolor: #4A69E2;
+    --BoldFont: "Boldonse", system-ui;
+    --yello: #FFA52F;
+    --grey: #232321;
+    --font2: "Poppins", sans-serif;
+}
+
+.NewOuter {
+    width: 100vw;
+    font-family: var(--BoldFont);
+}
+
+.NewOuter>.NewInner {
+    margin: 2% 10%;
+    overflow: hidden;
+
+}
+
+.NewOuter>.NewInner>.NewInnerMost {
+    margin-top: 5%;
+}
+
+/* ! Tittle Of New Drops  */
+.NewOuter>.NewInner>.NewInnerMost>.NewHeading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0px 30px;
+    /* background-color: aliceblue; */
+}
+
+/* ! Heading font */
+
+.NewOuter>.NewInner>.NewInnerMost>.NewHeading>h1 {
+    font-size: 3.5rem;
+
+    font-family: var(--BoldFont);
+    text-transform: uppercase;
+    width: 650px;
+    word-spacing: 0rem;
+    letter-spacing: 6px;
+}
+
+.NewOuter>.NewInner>.NewInnerMost>.NewHeading>h1>span {
+    background-color: var(--btncolor);
+    color: white;
+}
+
+/* ! Heading Btn */
+.NewOuter>.NewInner>.NewInnerMost>.NewHeading>button {
+    padding: 10px 30px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: var(--btncolor);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    /* transition: opacity 600ms ease-in-out; */
+    font-weight: bolder;
+}
+.NewOuter>.NewInner>.NewInnerMost>.NewHeading>button:active{
+    opacity: 0.8;
+}
+.NewOuter>.NewInner>.NewInnerMost>.NewHeading>button:hover {
+    /* opacity: 0.8; */
+    background-color: #6b88fd;
+}
+
+/* ! Product List */
+.NewOuter>.NewInner>.NewInnerMost>.NewDrops {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    justify-content: space-evenly;
+    gap: 1%;
+}
+
+/* ! Product cars */
+.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard {
+    width: 320px;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 600ms ease-in-out;
+    filter: blur(20px);
+    position: relative;
+
+}
+
+.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>.badge {
+    width: 70px;
+    height: 50px;
+    background-color: var(--btncolor);
+    border-radius: 30% 0% 50% 0%;
+    position: absolute;
+    z-index: 100;
+    left: 0%;
+    top: 0%;
+    font-size: 0.8rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: var(--font2);
+}
+
+.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard.show {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1);
+}
+
+.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>img {
+    border-radius: 20px;
+    transition: all 300ms ease-in-out;
+}
+
+.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>img:hover {
+
+    box-shadow: 0px 3px 6px black;
+
+}
+
+.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>p {
+    font-family: var(--BoldFont);
+    font-size: 0.9rem;
+    font-weight: 100;
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+}
+
+.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button {
+    padding: 10px 30px;
+    width: 100%;
+    height: 45px;
+    font-size: 1rem;
+    font-weight: lighter;
+    /* font-family: var(--BoldFont); */
+    font-weight: bolder;
+    text-transform: uppercase;
+    border: none;
+    background-color: var(--grey);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button>span {
+    color: var(--yello);
+}
+
+.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button:active {
+    opacity: 0.8;
+}
+
+.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button:hover {
+    background-color: rgb(56, 55, 55);
+}
+
+
+@media (max-width:1712px) {
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:1152px) {
+    .NewOuter>.NewInner>.NewInnerMost>.NewHeading>h1 {
+        font-size: 2.5rem;
+        width: 500px;
+    }
+}
+
+@media (max-width:908px) {
+    .NewOuter>.NewInner>.NewInnerMost>.NewHeading>h1 {
+        font-size: 2rem;
+        width: 400px;
+    }
+}
+
+@media (max-width:820px) {
+    .NewOuter>.NewInner>.NewInnerMost>.NewHeading>h1 {
+        font-size: 1.8rem;
+        width: 400px;
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard {
+        width: 220px;
+
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>img {
+        width: 100%;
+
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (max-width:763px) {
+    .NewOuter>.NewInner>.NewInnerMost>.NewHeading {
+        padding: 0%;
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewHeading>h1 {
+        font-size: 1.5rem;
+        width: 250px;
+        letter-spacing: 0cap;
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewHeading>button {
+        padding: 0px 20px;
+        width: 150px;
+        height: 40px;
+        font-size: x-small;
+
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>.badge {
+        width: 50px;
+        height: 40px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width:570px) {
+    .NewOuter>.NewInner {
+        margin: 0% 5%;
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>.badge {
+        width: 35px;
+        height: 35px;
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width:537px) {
+    .NewOuter>.NewInner {
+        margin: 0% 5%;
+        overflow: hidden;
+
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button {
+        font-size: 0.7rem;
+        font-weight: normal;
+        font-family: var(--font2);
+    }
+}
+
+@media (max-width:500px) {
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard {
+        width: 200px;
+
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>img:hover {
+        transform: none;
+        box-shadow: none;
+
+    }
+
+
+}
+
+@media (max-width:452px) {
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard {
+        width: 170px;
+
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button {
+
+        font-size: 0.6rem;
+
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>p {
+        font-family: var(--font2);
+        font-size: 0.8rem;
+        font-weight: bolder;
+
+
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>img:hover {
+        transform: none
+            /* box-shadow: 0px 3px 6px black; */
+
+    }
+
+}
+
+@media (max-width:419px) {
+    .NewOuter>.NewInner>.NewInnerMost>.NewHeading>h1 {
+        font-size: 1rem;
+        width: 170px;
+        letter-spacing: 0%;
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewHeading>button {
+        padding: 10px 20px;
+
+
+        font-size: x-small;
+
+    }
+
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>.badge {
+        width: 30px;
+        height: 30px;
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width:384px) {
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard {
+        width: 150px;
+
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button {
+
+        font-size: 0.5rem;
+
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>p {
+        font-family: var(--font2);
+        font-size: 0.7rem;
+        font-weight: bolder;
+
+
+    }
+
+}
+
+@media (max-width:337px) {
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard {
+        width: 120px;
+
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>p {
+        font-family: var(--font2);
+        font-size: 0.6rem;
+        font-weight: 400;
+
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button {
+        padding: 10px 5px;
+        width: 100%;
+        height: 45px;
+        font-size: 0.6rem;
+        font-weight: lighter;
+        /* font-family: var(--BoldFont); */
+        font-weight: 400;
+
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>.badge {
+        width: 20px;
+        height: 20px;
+        font-size: 0.4rem;
+    }
+}
+
+@media (max-width:328px) {
+    .NewOuter>.NewInner>.NewInnerMost>.NewHeading>h1 {
+        font-family: var(--font2);
+
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewHeading>button {
+        padding: 2.5px 5.5px;
+
+
+        font-size: xx-small;
+
+    }
+
+    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button {
+        font-size: 0.5rem;
+    }
+}

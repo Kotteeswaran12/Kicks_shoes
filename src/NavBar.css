@@ -56,6 +56,10 @@ nav>.navbar>.box>ul>li {
     position: relative;
 }
 
+nav>.navbar>.box>ul>li >a{
+    text-decoration: none;
+    color: black;
+}
 nav>.navbar>.box>ul>li::before {
     content: " ";
     position: absolute;
@@ -149,7 +153,7 @@ nav>.navbar>.box:nth-child(3)>.count {
         display: block;
     }
 
-    nav>.navbar>.box:nth-child(3)>img:nth-child(2) {
+    nav>.navbar>.box:nth-child(3)>.img {
         display: none;
     }
 }

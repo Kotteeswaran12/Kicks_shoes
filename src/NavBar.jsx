@@ -7,6 +7,7 @@ import SideBar from './SideBar'
 import { GoPersonFill } from "react-icons/go";
 const NavBar = () => {
     const [menu, setMenu] = useState(false);
+
     return (
 
         <nav>
@@ -17,7 +18,7 @@ const NavBar = () => {
 
                     }} />
                     <ul >
-                        <li>New Drops🔥</li>
+                        <li ><a href="#NewArrived">New Drops🔥</a></li>
                         <li>Men</li>
                         <li>women</li>
                     </ul>
@@ -28,7 +29,7 @@ const NavBar = () => {
                 </div>
                 <div className="box">
                     <img src={searchIcon} alt="" width="20px" />
-                    <GoPersonFill />
+                    <GoPersonFill className='img'/>
                     <div className="count">
                         0
                     </div>

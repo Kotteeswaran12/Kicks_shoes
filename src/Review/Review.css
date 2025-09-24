@@ -1,0 +1,202 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+:root {
+    --btncolor: #4A69E2;
+    --BoldFont: "Boldonse", system-ui;
+    --yello: #FFA52F;
+    --grey: #232321;
+    --font2: "Poppins", sans-serif;
+    --ReviewClg: #FFFFFF;
+}
+
+.ReviewSection {
+    margin: 5% 10%;
+}
+
+/* ! Review Heading Sections */
+.ReviewSection>.ReviewHeading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--BoldFont);
+}
+
+.ReviewSection>.ReviewHeading>h1 {
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+}
+
+/* ! Heading Button */
+.ReviewSection>.ReviewHeading>button {
+    padding: 10px 30px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: var(--btncolor);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    /* transition: opacity 600ms ease-in-out; */
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 1.01rem;
+
+}
+
+/** HoverEffect */
+.ReviewSection>.ReviewHeading>button:hover {
+
+    background-color: #637bdc;
+}
+
+/* *Action Effect  */
+.ReviewSection>.ReviewHeading>button:active {
+    opacity: 0.8;
+
+}
+
+.ReviewSection>.ReviewCards {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ReviewSection>.ReviewCards>.Review {
+    position: relative;
+    width: 430px;
+    /* height: 200px; */
+    background-color: var(--ReviewClg);
+    /* background-color: red; */
+    border-radius: 30px;
+
+}
+
+.ReviewSection>.ReviewCards>.Review>.Reviewcmd {
+    padding: 20px 30px;
+}
+
+.ReviewSection>.ReviewCards>.Review>.Reviewcmd>.Star {
+    display: flex;
+    /* background-color: red; */
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.ReviewSection>.ReviewCards>.Review>.Profile {
+    width: 80px;
+    height: 80px;
+    background-color: silver;
+    border-radius: 50%;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ReviewSection>.ReviewCards>.Review>.ReviewImg>img {
+    width: 100%;
+    /* height: 325px; */
+    object-fit: cover;
+    margin-top: 10px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+@media (max-width:1698px) {
+    .ReviewSection>.ReviewCards {
+        flex-wrap: wrap;
+        gap: 40px;
+
+    }
+
+    @keyframes heightExpand {
+        from {
+            height: 0px;
+        }
+
+        to {
+            height: fit-content;
+        }
+    }
+}
+
+
+
+
+@media (max-width:1124px) {
+    .ReviewSection>.ReviewCards>.Review {
+        height: 110px;
+        overflow: hidden;
+        transition: all 1s ease-in-out;
+    }
+
+    .ReviewSection>.ReviewCards>.Review.show {
+        transition: all 1s ease-in-out;
+        height: 430px;
+        /* animation: heightExpand 1s ease-in-out  forwards; */
+        box-shadow: 0px 3px 6px black;
+        z-index: 100;
+        transform: scale(1.03);
+        /* margin-bottom: 10%; */
+    }
+}
+
+@media (max-width:520px) {
+    .ReviewSection>.ReviewCards>.Review.show {
+        height: 400px;
+    }
+
+    .ReviewSection>.ReviewHeading>h1 {
+        font-size: 0.9rem;
+    }
+
+    .ReviewSection>.ReviewHeading>button {
+        /* padding: 5px 10px; */
+        width: 150px; 
+         height: 40px;
+       
+        font-size: 1rem;
+
+    }
+    .ReviewSection>.ReviewCards>.Review>.Profile {
+        width: 40px;
+        height: 40px;
+        top: 7%;
+        right: 7%;
+    }
+}
+
+@media (max-width:472px) {
+    .ReviewSection>.ReviewCards>.Review>.Reviewcmd > p{
+        width: 80%;
+    }
+}
+@media (max-width:440px) {
+    .ReviewSection>.ReviewCards>.Review.show {
+        height: 380px;
+    }
+}
+@media (max-width:407px) {
+    .ReviewSection>.ReviewCards>.Review.show {
+        height: 360px;
+    }
+}
+
+@media (max-width:375px) {
+    .ReviewSection>.ReviewCards>.Review.show {
+        height: 350px;
+    }
+}
+@media (max-width:365px) {
+    .ReviewSection>.ReviewCards>.Review.show {
+        height: 300px;
+    }
+}
