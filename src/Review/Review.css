@@ -15,6 +15,7 @@
 
 .ReviewSection {
     margin: 5% 10%;
+    overflow: hidden;
 }
 
 /* ! Review Heading Sections */
@@ -132,24 +133,107 @@
 
 
 @media (max-width:1124px) {
+    /* .ReviewSection>.ReviewCards>.Review {
+        height: 110px;
+        overflow: hidden;
+        transition: all 1s ease-in-out;
+    } */
+
     .ReviewSection>.ReviewCards>.Review {
+        width: 350px;
+        height: 380px;
+    }
+
+    .ReviewSection>.ReviewCards>.Review>.Profile {
+        width: 50px;
+        height: 50px;
+        top: 7%;
+        right: 3%;
+    }
+
+
+    .ReviewSection>.ReviewCards>.Review>.Reviewcmd>p {
+        width: 80%;
+    }
+}
+
+@media (max-width:912px) {
+    /* .ReviewSection>.ReviewCards>.Review {
+        height: 110px;
+        overflow: hidden;
+        transition: all 1s ease-in-out;
+    } */
+
+    .ReviewSection>.ReviewCards>.Review {
+        width: 300px;
+        height: 350px;
+    }
+
+    .ReviewSection>.ReviewCards>.Review>.Profile {
+        width: 50px;
+        height: 50px;
+        top: 7%;
+        right: 3%;
+    }
+
+
+    .ReviewSection>.ReviewCards>.Review>.Reviewcmd>p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:800px) {
+
+    .ReviewSection>.ReviewCards>.Review {
+        width: 300px;
+        height: 340px;
+    }
+
+    .ReviewSection>.ReviewCards>.Review>.Reviewcmd>p {
+        width: 90%;
+        font-size: 0.8rem;
+    }
+    .ReviewSection>.ReviewCards{
+        gap: 10px;
+    }
+}
+@media (max-width:762px) {
+    .ReviewSection>.ReviewCards>.Review {
+        width: 260px;
+        height: 320px;
+    }
+
+    .ReviewSection>.ReviewCards>.Review>.Reviewcmd>p {
+        width: 90%;
+        font-size: 0.8rem;
+    }
+    
+}
+
+@media (max-width:674px) {
+    .ReviewSection>.ReviewCards>.Review {
+        width: 90%;
         height: 110px;
         overflow: hidden;
         transition: all 1s ease-in-out;
     }
 
     .ReviewSection>.ReviewCards>.Review.show {
-        transition: all 1s ease-in-out;
-        height: 430px;
-        /* animation: heightExpand 1s ease-in-out  forwards; */
-        box-shadow: 0px 3px 6px black;
-        z-index: 100;
-        transform: scale(1.03);
-        /* margin-bottom: 10%; */
+        height: 310px;
+    }
+
+    .ReviewSection>.ReviewCards>.Review.show>.ReviewImg>img {
+        width: 100%;
+        /* height: 200px; */
+        object-fit: fill;
     }
 }
 
 @media (max-width:520px) {
+    .ReviewSection {
+        margin: 0% 5%;
+    }
+
     .ReviewSection>.ReviewCards>.Review.show {
         height: 400px;
     }
@@ -160,12 +244,13 @@
 
     .ReviewSection>.ReviewHeading>button {
         /* padding: 5px 10px; */
-        width: 150px; 
-         height: 40px;
-       
+        width: 150px;
+        height: 40px;
+
         font-size: 1rem;
 
     }
+
     .ReviewSection>.ReviewCards>.Review>.Profile {
         width: 40px;
         height: 40px;
@@ -175,15 +260,23 @@
 }
 
 @media (max-width:472px) {
-    .ReviewSection>.ReviewCards>.Review>.Reviewcmd > p{
+    .ReviewSection>.ReviewCards>.Review>.Reviewcmd>p {
         width: 80%;
     }
 }
+
 @media (max-width:440px) {
     .ReviewSection>.ReviewCards>.Review.show {
         height: 380px;
     }
 }
+
+@media (max-width:437px) {
+    .ReviewSection>.ReviewCards>.Review.show {
+        height: 370px;
+    }
+}
+
 @media (max-width:407px) {
     .ReviewSection>.ReviewCards>.Review.show {
         height: 360px;
@@ -195,6 +288,7 @@
         height: 350px;
     }
 }
+
 @media (max-width:365px) {
     .ReviewSection>.ReviewCards>.Review.show {
         height: 300px;
