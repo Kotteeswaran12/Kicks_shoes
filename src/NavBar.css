@@ -54,19 +54,22 @@ nav>.navbar>.box>ul>li {
     cursor: pointer;
     transition: transform 600ms ease-in-out;
     position: relative;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
-nav>.navbar>.box>ul>li >a{
+nav>.navbar>.box>ul>li>a {
     text-decoration: none;
     color: black;
 }
+
 nav>.navbar>.box>ul>li::before {
     content: " ";
     position: absolute;
     border-radius: 15px;
     width: 0px;
     background-color: var(--count);
-    height: 5px;
+    height: 2px;
     bottom: 0;
     transition: width 600ms ease-in-out;
 
@@ -83,11 +86,15 @@ nav>.navbar>.box>ul>li:hover {
 nav>.navbar>.box:nth-child(2)>h1 {
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    user-select: none;
+    -webkit-user-select: none;
     font-weight: 1000;
     font-size: 2rem;
 }
 
 nav>.navbar>.box:nth-child(3) {
+    user-select: none;
+    -webkit-user-select: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,7 +102,12 @@ nav>.navbar>.box:nth-child(3) {
 }
 
 nav>.navbar>.box:nth-child(3)>img {
+
     cursor: pointer;
+}
+
+nav>.navbar>.box:nth-child(3)>.img {
+    font-size: 20px;
 }
 
 nav>.navbar>.box:nth-child(3)>.count {

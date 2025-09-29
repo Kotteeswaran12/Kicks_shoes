@@ -6,12 +6,9 @@ function NewDrop() {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    console.log("Hello");
-                    console.log("Hello", entry.target);
+                   
                     entry.target.classList.add("show");
-                } else {
-                    entry.target.classList.remove("show")
-                }
+                } 
             });
         }, { threshold: 0 })
 

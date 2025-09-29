@@ -67,9 +67,11 @@
     /* transition: opacity 600ms ease-in-out; */
     font-weight: bolder;
 }
-.NewOuter>.NewInner>.NewInnerMost>.NewHeading>button:active{
+
+.NewOuter>.NewInner>.NewInnerMost>.NewHeading>button:active {
     opacity: 0.8;
 }
+
 .NewOuter>.NewInner>.NewInnerMost>.NewHeading>button:hover {
     /* opacity: 0.8; */
     background-color: #6b88fd;
@@ -89,11 +91,19 @@
 .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard {
     width: 320px;
     opacity: 0;
-    transform: scale(0);
-    transition: all 600ms ease-in-out;
-    filter: blur(20px);
+    transform: translateY(50px);
+    transition: all 1s ease-in-out;
+
     position: relative;
 
+}
+
+
+
+.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard.show {
+    opacity: 1;
+
+    transform: translateY(0px);
 }
 
 .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>.badge {
@@ -114,11 +124,6 @@
     font-family: var(--font2);
 }
 
-.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard.show {
-    opacity: 1;
-    filter: blur(0px);
-    transform: scale(1);
-}
 
 .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>img {
     border-radius: 20px;

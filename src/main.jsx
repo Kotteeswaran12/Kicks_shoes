@@ -6,14 +6,22 @@ import HeroSection from './HeroSection/HeroSection.jsx'
 import NewDrop from './NewDrop/NewDrop.jsx'
 import Review from './Review/Review.jsx'
 import Footer from './Footer/Footer.jsx'
+import HomePage from './HeroSection/HomePage.jsx'
 // import Dummy from './Dummy.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <NavBar />
+    {/* <NavBar />
     <HeroSection/>
     <NewDrop/>
     <Review />
-   <Footer/>
+   <Footer/> */}
+
+    <NavBar />
+    {/* <HomePage /> */}
+     <HeroSection/>
+    <NewDrop />
+    <Review />
+    <Footer />
   </StrictMode>,
 )

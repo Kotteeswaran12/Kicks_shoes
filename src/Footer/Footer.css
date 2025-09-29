@@ -9,10 +9,30 @@
     --bgcolor: #4A69E2
 }
 
+*:focus {
+    outline: none;
+}
+
 .footer {
     margin: 5% 10%;
+}
+
+.footer>.FooterInner {
     position: relative;
 }
+/* .footer>.FooterInner.visible{
+    animation: up 600ms ease-in-out forwards;
+}
+@keyframes up {
+    0%{
+        opacity: 0;
+        scale: 0;
+    }100%{
+        opacity: 1;
+        scale: 1;
+        
+    }
+} */
 
 /* ! Section 1 */
 .footer>.FooterInner>.FooterSection1 {
@@ -46,7 +66,7 @@
     display: flex;
     gap: 10px;
     margin-top: 40px;
-    /* background-color: red; */
+    /*  */
 }
 
 .footer>.FooterInner>.FooterSection1>.input>.textbox>input {
@@ -67,6 +87,7 @@
     color: var(--white);
 
 }
+
 .footer>.FooterInner>.FooterSection1>.input>.textbox>button {
     width: 100px;
     height: 40px;
@@ -114,15 +135,16 @@
     font-family: var(--BoldFont);
     position: relative;
     width: 100%;
-    height:50px;
+    height: 50px;
     z-index: 0;
 }
 
 .footer>.FooterInner>.FooterSection2>.Logo>h1 {
     position: absolute;
     font-size: 25.9rem;
+    /* background-color: #4A69E2; */
     top: -50%;
-    /* background-color: red; */
+    /*  */
     /* left: 40%; */
 }
 
@@ -131,13 +153,13 @@
     display: flex;
     /* text-align: center; */
     padding: 0px 60px;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
     height: 45%;
     color: var(--white);
     margin-top: 50px;
     z-index: 4;
-    /* background-color: red; */
+    /*  */
 }
 
 .footer>.FooterInner>.FooterSection2>.FooterMain>.Part>h3 {
@@ -157,33 +179,601 @@
 .footer>.FooterInner>.FooterSection2>.FooterMain>.Part>ul {
     list-style: none;
     height: 100%;
-    /* background-color: red; */
+    /*  */
 }
 
 .footer>.FooterInner>.FooterSection2>.FooterMain>.Part>ul>li {
-
+    user-select: none;
+    -webkit-user-select: none;
     cursor: pointer;
-
+    cursor: context-menu;
     text-transform: capitalize;
     margin: 10px 0px;
     width: fit-content;
-
+    color: var(--white);
     font-size: 1.1rem;
     font-family: var(--font2);
 
+}
+.footer>.FooterInner>.FooterSection2>.FooterMain>.Part>ul>li > a{
+    text-decoration: none;
+    color: var(--white);
 }
 
 .footer>.FooterInner>.FooterSection2>.FooterMain>.Part>ul>li:hover {
     color: var(--yello);
     scale: 1.2;
 }
-.footer>.FooterInner>.FooterSection2>.FooterMain>.Part > .socialMedia {
+
+.footer>.FooterInner>.FooterSection2>.FooterMain>.Part>.socialMedia {
     display: flex;
     gap: 20px;
     margin-top: 20px;
 }
-.footer>.FooterInner>.FooterSection2>.FooterMain>.Part > .socialMedia > .icon:hover {
+
+.footer>.FooterInner>.FooterSection2>.FooterMain>.Part>.socialMedia>.icon {
+    font-size: 23px;
+    /* color: red; */
+    
+    size: 10%;
+}
+
+.footer>.FooterInner>.FooterSection2>.FooterMain>.Part>.socialMedia>.icon:hover {
     color: var(--yello);
     scale: 1.2;
     cursor: pointer;
+}
+
+@media (max-width:1440px) {
+    .footer>.FooterInner>.FooterSection2>.Logo {
+
+        width: fit-content;
+        height: 20px;
+        z-index: 0;
+    }
+
+    .footer>.FooterInner>.FooterSection2>.Logo>h1 {
+        position: absolute;
+        font-size: 20rem;
+        /* background-color: #4A69E2; */
+        top: -50%;
+        /*  */
+        /* left: 40%; */
+    }
+}
+
+@media (max-width:1312px) {
+    .footer>.FooterInner>.FooterSection2>.Logo {
+
+        width: fit-content;
+        height: 20px;
+        z-index: 0;
+    }
+
+    .footer>.FooterInner>.FooterSection2>.Logo>h1 {
+        position: absolute;
+        font-size: 17.9rem;
+        /* background-color: #4A69E2; */
+        top: -50%;
+        /*  */
+        /* left: 40%; */
+    }
+}
+
+@media (max-width:1284px) {
+    .footer>.FooterInner>.FooterSection1>.input>h3 {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+
+    }
+
+    .footer>.FooterInner>.FooterSection1>.input>p {
+        font-size: 1rem;
+        margin: 10px 0px;
+        color: var(--white);
+        font-family: var(--font2);
+    }
+}
+
+@media (max-width:1242px) {
+    .footer>.FooterInner>.FooterSection2>.FooterMain>.Part>p {
+        width: 350px;
+        font-size: 0.9rem;
+    }
+
+    .footer>.FooterInner>.FooterSection2>.Logo {
+
+        width: 100%;
+
+        height: 300px;
+        z-index: 0;
+        text-align: center;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.Logo>h1 {
+        position: relative;
+        font-size: 16rem;
+        /* width: 100%; */
+        /* background-color: rebeccapurple; */
+        /* background-color: #4A69E2; */
+        top: 10%;
+        /*  */
+        /* left: 40%; */
+    }
+}
+
+@media (max-width:1138px) {
+    .footer>.FooterInner>.FooterSection1>.bigLogo>h1 {
+        font-size: 4rem;
+    }
+
+    .footer>.FooterInner>.FooterSection2>.FooterMain>.Part>h3 {
+
+        font-size: 0.75rem;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.FooterMain>.Part>ul>li {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width:1046px) {
+    .footer>.FooterInner>.FooterSection1>.bigLogo>h1 {
+        font-size: 3rem;
+    }
+
+    .footer>.FooterInner>.FooterSection1>.input>h3 {
+        font-size: 1rem;
+        letter-spacing: 0px;
+
+    }
+
+    .footer>.FooterInner>.FooterSection1>.input>p {
+        font-size: 0.9rem;
+
+    }
+
+    .footer>.FooterInner>.FooterSection1>.input>.textbox>input {
+        width: 250px;
+        height: 40px;
+
+        font-size: 1rem;
+
+
+    }
+
+    .footer>.FooterInner>.FooterSection1>.input>.textbox>input::placeholder {
+        font-size: 0.9rem;
+
+
+    }
+
+    .footer>.FooterInner>.FooterSection1>.input>.textbox>button {
+        width: 100px;
+        height: 40px;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.FooterMain>.Part>h3 {
+
+        font-size: 0.65rem;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.FooterMain>.Part>p {
+        width: 200px;
+        font-size: 0.7rem;
+    }
+
+    .footer>.FooterInner>.FooterSection2>.FooterMain>.Part>ul>li {
+        font-size: 0.9rem;
+    }
+
+    .footer>.FooterInner>.FooterSection2>.Logo>h1 {
+        position: relative;
+        font-size: 14rem;
+        top: 20%;
+
+    }
+}
+
+@media (max-width:967px) {
+    .footer>.FooterInner>.FooterSection2>.Logo>h1 {
+        position: relative;
+        font-size: 12rem;
+        top: 30%;
+
+    }
+}
+
+@media (max-width:856px) {
+    .footer>.FooterInner>.FooterSection2>.FooterMain> {
+        gap: 0px;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.FooterMain>.Part>h3 {
+
+        font-size: 0.65rem;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.FooterMain>.Part>p {
+        width: 150px;
+        font-size: 0.5rem;
+    }
+
+    .footer>.FooterInner>.FooterSection2>.FooterMain>.Part>ul>li {
+        font-size: 0.8rem;
+    }
+
+    .footer>.FooterInner>.FooterSection2>.FooterMain>.Part>.socialMedia>.icon {
+        font-size: 20px;
+    }
+
+    .footer>.FooterInner>.FooterSection1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding-top: 4rem;
+    }
+
+    .footer>.FooterInner>.FooterSection1>.bigLogo>h1 {
+        font-size: 5rem;
+    }
+
+    .footer>.FooterInner>.FooterSection1>.input>h3 {
+        font-size: 1.2rem;
+        letter-spacing: 0px;
+
+    }
+
+    .footer>.FooterInner>.FooterSection1>.input>p {
+        font-size: 1rem;
+
+
+    }
+
+    .footer>.FooterInner>.FooterSection1>.input>.textbox {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .footer>.FooterInner>.FooterSection1>.input>.textbox>input {
+        width: 80%;
+        height: 40px;
+
+        font-size: 1rem;
+
+
+    }
+
+    .footer>.FooterInner>.FooterSection1>.input>.textbox>input::placeholder {
+        font-size: 0.9rem;
+
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.Logo>h1 {
+        position: relative;
+        font-size: 11rem;
+        top: 30%;
+
+    }
+
+}
+
+@media (max-width:745px) {
+    .footer>.FooterInner>.FooterSection2>.Logo>h1 {
+        position: relative;
+        font-size: 10rem;
+        top: 30%;
+
+    }
+}
+
+@media (max-width:714px) {
+    .footer>.FooterInner>.FooterSection2>.FooterMain {
+        flex-direction: column;
+        padding: 0px 60px;
+        align-items: start;
+        justify-content: space-evenly;
+        gap: 20px;
+        height: fit-content;
+        margin-top: 45px;
+        z-index: 4;
+    }
+
+    .footer>.FooterInner>.FooterSection2>.FooterMain>.Part>h3 {
+
+        font-size: 1.01rem;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.FooterMain>.Part>p {
+        width: 300px;
+        font-size: 0.9rem;
+        margin-top: 0%;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.FooterMain>.Part>ul>li {
+        font-size: 0.9rem;
+    }
+
+    .footer>.FooterInner>.FooterSection2 {
+        height: fit-content;
+
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.Logo {
+        margin-top: 2.5rem;
+        width: 100%;
+
+        height: 100px;
+        z-index: 0;
+        text-align: center;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.Logo>h1 {
+        /* position: relative; */
+        font-size: 9rem;
+        top: -20%;
+
+    }
+
+}
+
+@media (max-width:654px) {
+    .footer>.FooterInner>.FooterSection2>.Logo {
+        margin-top: 2.5rem;
+        width: 100%;
+
+        height: 100px;
+        z-index: 0;
+        text-align: center;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.Logo>h1 {
+        /* position: relative; */
+        font-size: 8.5rem;
+        top: -20%;
+
+    }
+
+}
+
+@media (max-width:616px) {
+    .footer>.FooterInner>.FooterSection2>.Logo {
+        margin-top: 2.5rem;
+        width: 100%;
+
+        height: 100px;
+        z-index: 0;
+        text-align: center;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.Logo>h1 {
+        /* position: relative; */
+        font-size: 8rem;
+        top: -20%;
+
+    }
+
+}
+
+@media (max-width:587px) {
+    .footer>.FooterInner>.FooterSection2>.Logo {
+        margin-top: 2.5rem;
+        width: 100%;
+
+        height: 100px;
+        z-index: 0;
+        text-align: center;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.Logo>h1 {
+        /* position: relative; */
+        font-size: 7.5rem;
+        top: -20%;
+
+    }
+
+}
+
+@media (max-width:561px) {
+    .footer {
+        margin: 10% 5%;
+    }
+
+    .footer>.FooterInner>.FooterSection1 {
+
+        padding: 50px 30px;
+
+    }
+
+    .footer>.FooterInner>.FooterSection1>.bigLogo>h1 {
+        font-size: 5rem;
+    }
+
+    .footer>.FooterInner>.FooterSection1>.input>h3 {
+        font-size: 1rem;
+        letter-spacing: 0px;
+
+    }
+
+    .footer>.FooterInner>.FooterSection1>.input>p {
+        font-size: 1rem;
+
+
+    }
+}
+
+@media (max-width:497px) {
+    .footer>.FooterInner>.FooterSection2>.Logo {
+        margin-top: 2.5rem;
+        width: 100%;
+
+        height: 100px;
+        z-index: 0;
+        text-align: center;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.Logo>h1 {
+        /* position: relative; */
+        font-size: 7rem;
+        top: -10%;
+
+    }
+
+}
+
+@media (max-width:457px) {
+    .footer>.FooterInner>.FooterSection2>.Logo {
+        margin-top: 2.5rem;
+        width: 100%;
+
+        height: 100px;
+        z-index: 0;
+        text-align: center;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.Logo>h1 {
+        /* position: relative; */
+        font-size: 6.5rem;
+        top: -10%;
+
+    }
+
+}
+
+@media (max-width:424px) {
+    .footer>.FooterInner>.FooterSection2>.Logo {
+        margin-top: 2.5rem;
+        width: 100%;
+
+        height: 100px;
+        z-index: 0;
+        text-align: center;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.Logo>h1 {
+        /* position: relative; */
+        font-size: 6rem;
+        top: -10%;
+
+    }
+
+}
+
+@media (max-width:403px) {
+    .footer>.FooterInner>.FooterSection1 {
+
+        padding: 50px 20px;
+
+    }
+
+    .footer>.FooterInner>.FooterSection1>.input>p {
+        font-size: 0.8rem;
+
+
+    }
+
+    .footer>.FooterInner>.FooterSection1>.input>.textbox>button {
+        width: 100px;
+        height: 30px;
+        font-size: 0.7rem;
+
+    }
+
+    .footer>.FooterInner>.FooterSection1>.input>.textbox>input {
+        height: 30px;
+    }
+
+    .footer>.FooterInner>.FooterSection1>.bigLogo>h1 {
+        font-size: 4rem;
+    }
+
+    .footer>.FooterInner>.FooterSection2>.FooterMain {
+
+        padding: 0px 30px;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.FooterMain>.Part>p {
+        width: 100%;
+        font-size: 0.7rem;
+        margin-top: 0%;
+
+    }
+}
+
+@media (max-width:457px) {
+    .footer>.FooterInner>.FooterSection2>.Logo {
+        margin-top: 2.5rem;
+        width: 100%;
+
+        height: 100px;
+        z-index: 0;
+        text-align: center;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.Logo>h1 {
+        /* position: relative; */
+        font-size: 6rem;
+        top: 10%;
+
+    }
+
+}
+
+
+@media (max-width:391px) {
+    .footer>.FooterInner>.FooterSection2>.Logo {
+        margin-top: 2.5rem;
+        width: 100%;
+        
+        height: 100px;
+        z-index: 0;
+        text-align: center;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.Logo>h1 {
+        /* position: relative; */
+        font-size: 5rem;
+        /* top: -10%; */
+
+    }
+
+}
+@media (max-width:333px) {
+    .footer>.FooterInner>.FooterSection2>.Logo {
+        margin-top: 2.5rem;
+        width: 100%;
+        
+        height: 100px;
+        z-index: 0;
+        text-align: center;
+
+    }
+
+    .footer>.FooterInner>.FooterSection2>.Logo>h1 {
+        /* position: relative; */
+        font-size: 4.5rem;
+       
+
+    }
+
 }

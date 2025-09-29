@@ -3,7 +3,8 @@ import './HeroSection.css'
 import bgImg from '../assets/HeroImgs/image 14.png'
 import smlImg1 from '../assets/HeroImgs/Rectangle 1.png'
 import smlImg2 from '../assets/HeroImgs/Rectangle 2.png'
-import './HeroSection'
+
+
 const HeroSection = () => {
 
 

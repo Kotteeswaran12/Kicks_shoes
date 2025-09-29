@@ -1,19 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Footer.css"
 import { PiTwitterLogoFill } from "react-icons/pi";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { textBox } from './Functionlity.js';
 function Footer() {
+    useEffect(() => {
+        const observer = new IntersectionObserver((entrys) => {
+            entrys.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                } else {
+                    entry.target.classList.remove("visible")
+                }
+            });
+        }, { threshold: 0 })
+        const element = document.querySelectorAll(".FooterInner");
+        element.forEach(ele => observer.observe(ele))
+    }, [])
+    
     return (
         <div className="footer">
-            <div className="FooterInner">
-                <div className="FooterSection1">
+            <div className="FooterInner" >
+                <div className="FooterSection1" >
                     <div className="input">
                         <h3>Join our KicksPlus Club & get 15% off</h3>
                         <p>Sign up for free! Join the community.</p>
                         <div className="textbox">
-                            <input type="text" placeholder="Enter Address" />
-                            <button>Submit</button>
+                            <input type="email" placeholder="Enter Address" className="UserEmail" />
+                            <button onClick={() => { textBox() }}>Submit</button>
                         </div>
                     </div>
                     <div className="bigLogo">
@@ -51,9 +66,9 @@ function Footer() {
                         <div className="Part">
                             <h3>Follow us</h3>
                             <div className="socialMedia">
-                                <PiTwitterLogoFill size={25} className="icon"/>
-                                <FaFacebook size={25}className="icon" />
-                                <FaInstagram size={25} className="icon"/>
+                                <PiTwitterLogoFill className="icon" />
+                                <FaFacebook className="icon" />
+                                <FaInstagram className="icon" />
                             </div>
                         </div>
                     </div>

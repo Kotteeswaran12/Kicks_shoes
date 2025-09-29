@@ -3,6 +3,9 @@ import '../Review/Review.css'
 import { TiStar } from "react-icons/ti";
 import reviewImg1 from '../assets/ReviewAssets/image 38.png';
 import { BsPersonFill } from "react-icons/bs";
+import spider from '../assets/profile/Spider.png'
+import iron from '../assets/profile/ion.png'
+import deadpool from '../assets/profile/deadpool.png'
 const Review = () => {
     const [active, setActive] = useState(false);
     return (
@@ -34,7 +37,7 @@ const Review = () => {
 
                     </div>
 
-                    <div className="Profile"><BsPersonFill /></div>
+                    <div className="Profile"><img src={spider} alt="" /></div>
 
                     <div className="ReviewImg">
                         <img src={reviewImg1} alt="" />
@@ -63,7 +66,7 @@ const Review = () => {
 
                     </div>
 
-                    <div className="Profile"><BsPersonFill /></div>
+                    <div className="Profile"><img src={deadpool} alt="" /></div>
 
                     <div className="ReviewImg">
                         <img src={reviewImg1} alt="" />
@@ -93,7 +96,7 @@ const Review = () => {
 
                     </div>
 
-                    <div className="Profile"><BsPersonFill  /></div>
+                    <div className="Profile"><img src={iron} alt="" /></div>
 
                     <div className="ReviewImg">
                         <img src={reviewImg1} alt="" />

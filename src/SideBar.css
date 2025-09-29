@@ -2,12 +2,13 @@
     --navcolor: #fafafaaa;
     --count: #FFA52F;
 }
+
 /* *:focus{
     outline: none;
 } */
 
 .sidebar {
-   
+
     position: fixed;
     top: 0;
     left: 0;
@@ -42,18 +43,19 @@
     padding: 0px 20px;
     display: flex;
     justify-content: space-between;
-     font-family: "Boldonse", system-ui;
+    font-family: "Boldonse", system-ui;
     align-items: center;
     height: 100px;
     top: 5%;
     right: 5%;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 900;
-    
+
 
 }
 
 .sidebar>.listOf>.close>.closeIcon {
+    font-size: 30px;
     transition: transform 1s ease-in-out;
 }
 
@@ -68,7 +70,7 @@
     /* background-color: red; */
     height: 70%;
     display: flex;
-  
+
     justify-content: center;
     align-items: center;
     font-size: 2rem;
@@ -87,21 +89,65 @@
 }
 
 .sidebar>.listOf>.orderList>ul>li {
+    user-select: none;
+    -webkit-user-select: none;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
-.sidebar>.listOf>.orderList>ul>li>a{
+
+.sidebar>.listOf>.orderList>ul>li>.Men,
+.Women {
+    size: 30px;
+
+}
+
+/* .sidebar>.listOf>.orderList>ul>.Men {
+    color: #4da6ff;
+}
+
+.sidebar>.listOf>.orderList>ul>.Women {
+    color: #ff66cc;
+} */
+
+.sidebar>.listOf>.orderList>ul>li>.Men {
+    color: #4da6ff;
+}
+
+.sidebar>.listOf>.orderList>ul>li>.Women {
+    color: #ff66cc;
+}
+
+.sidebar>.listOf>.orderList>ul>li>a {
     text-decoration: none;
     color: black;
 }
+
+.sidebar>.listOf>.orderList>ul>li>a>span {
+    color: var(--count);
+}
+
+/* .sidebar.open>.listOf>.orderList>ul>li>a>.Rocket {
+    animation: rocket 5s ease-in-out infinite;
+}
+
+@keyframes rocket {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  100% {
+   
+    transform: translateZ(40%) scale(3) ;
+  }
+} */
+
 
 .sidebar>.listOf>.orderList>ul>li>img {
     object-fit: contain;
 }
 
-.listOf > .socialmedia{
+.listOf>.socialmedia {
     border-top: 1px solid rgb(92, 91, 91);
     padding-top: 20px;
 

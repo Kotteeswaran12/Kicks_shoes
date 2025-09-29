@@ -31,13 +31,17 @@
     color: var(--violet);
 }
 
+
 .Outer>.main {
     width: 100%;
     height: fit-content;
     position: relative;
     overflow: hidden;
 
+    
+   
 }
+
 
 .Outer>.main>img {
     width: 100%;
@@ -102,7 +106,7 @@
     object-fit: cover;
     /* background-color: red; */
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-    animation: float 5s ease-in-out infinite alternate;
+    animation: float 2.5s ease-in-out infinite alternate;
 }
 
 
@@ -489,3 +493,5 @@
         /* background-color: red; */
     }
 }
+
+

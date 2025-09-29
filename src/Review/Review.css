@@ -84,15 +84,22 @@
 .ReviewSection>.ReviewCards>.Review>.Reviewcmd>.Star {
     display: flex;
     /* background-color: red; */
+    color: gold;
     gap: 10px;
 
     margin-top: 10px;
+}
+.ReviewSection>.ReviewCards>.Review>.Reviewcmd>.Star > p{
+    color: black;
+    font-weight: bold;
+    font-size: 0.7rem;
+    /* font-family: var(--BoldFont); */
 }
 
 .ReviewSection>.ReviewCards>.Review>.Profile {
     width: 80px;
     height: 80px;
-    background-color: silver;
+    /* background-color: silver; */
     border-radius: 50%;
     position: absolute;
     right: 5%;
@@ -100,6 +107,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.ReviewSection>.ReviewCards>.Review>.Profile > img{
+    width: 100%;
+    object-fit: cover;
 }
 
 .ReviewSection>.ReviewCards>.Review>.ReviewImg>img {
@@ -231,7 +242,7 @@
 
 @media (max-width:520px) {
     .ReviewSection {
-        margin: 0% 5%;
+        margin: 5% 5%;
     }
 
     .ReviewSection>.ReviewCards>.Review.show {
