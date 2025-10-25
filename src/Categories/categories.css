@@ -1,0 +1,141 @@
+:root {
+    --btncolor: #4A69E2;
+    --BoldFont: "Boldonse", system-ui;
+    --yello: #FFA52F;
+    --grey: #232321;
+    --font2: "Poppins", sans-serif;
+    --white: #FFFFFF;
+    --black: #000000;
+    --bgcolor: #4A69E2
+}
+
+.outerLayer {
+    background-color: var(--black);
+}
+
+.outerLayer>.innerLayer {
+    margin: 10% 5%;
+
+    height: 700px;
+    padding: 2% 3%;
+    overflow: hidden;
+
+}
+
+.outerLayer>.innerLayer>.heading {
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.8rem;
+    font-family: var(--BoldFont);
+    margin-top: 1%;
+}
+
+.outerLayer>.innerLayer>.heading>.navigation {
+    width: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.outerLayer>.innerLayer>.heading>.navigation>button {
+    width: 40px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.outerLayer>.innerLayer>.items {
+    scroll-behavior: smooth;
+
+    width: 100%;
+    overflow-x: scroll;
+
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+}
+
+.outerLayer>.innerLayer>.items::-webkit-scrollbar {
+    display: none;
+}
+
+.outerLayer>.innerLayer>.items::scroll-button(right) {
+    content: ">";
+    width: 40px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    background-color: red
+
+}
+
+.outerLayer>.innerLayer>.items::scroll-button(left) {
+    content: "<";
+    width: 40px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.outerLayer>.innerLayer>.items>.products {
+    /* width: 500px; */
+    height: 100%;
+    flex: 0 0 20em;
+    /* background-color: red;
+     */
+     margin-left: 20px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+}
+.outerLayer>.innerLayer>.items>.products>img{
+   width: 100%;
+   height: 300px;
+   object-fit: cover;
+    /* background-color: red */
+}
+
+@media (max-width:882px) {
+    .outerLayer>.innerLayer>.heading > h1{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:590px) {
+
+    .outerLayer>.innerLayer>.heading{
+        justify-content: space-between;
+    }
+    .outerLayer>.innerLayer>.heading > h1{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:410px) {
+
+    .outerLayer>.innerLayer>.heading{
+        justify-content: space-between;
+        margin-top: 10%;
+    }
+    .outerLayer>.innerLayer>.heading > h1{
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+    .outerLayer>.innerLayer>.heading > .navigation > button{
+        height: 10%;
+    }
+}

@@ -6,21 +6,17 @@ import HeroSection from './HeroSection/HeroSection.jsx'
 import NewDrop from './NewDrop/NewDrop.jsx'
 import Review from './Review/Review.jsx'
 import Footer from './Footer/Footer.jsx'
-import HomePage from './HeroSection/HomePage.jsx'
+import Categories from './Categories/categories.jsx'
 // import Dummy from './Dummy.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <NavBar />
-    <HeroSection/>
-    <NewDrop/>
-    <Review />
-   <Footer/> */}
+
 
     <NavBar />
-    {/* <HomePage /> */}
-     <HeroSection/>
+    <HeroSection />
     <NewDrop />
+    <Categories></Categories>
     <Review />
     <Footer />
   </StrictMode>,
