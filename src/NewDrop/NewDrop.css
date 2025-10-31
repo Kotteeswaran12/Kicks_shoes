@@ -90,10 +90,8 @@
 /* ! Product cars */
 .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard {
     width: 320px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1s ease-in-out;
-
+    
+    
     position: relative;
 
 }
@@ -180,6 +178,7 @@
         flex-wrap: wrap;
     }
 }
+
 
 @media (max-width:1152px) {
     .NewOuter>.NewInner>.NewInnerMost>.NewHeading>h1 {

@@ -1,22 +1,35 @@
 import './NewDrop.css'
 import newDrop1 from '../assets/NewDrops/Rectangle 5.png'
 import { useEffect } from 'react';
-function NewDrop() {
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                   
-                    entry.target.classList.add("show");
-                } else {
-                    entry.target.classList.remove("show")
-                }
-            });
-        }, { threshold: 0 })
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
-        const elements = document.querySelectorAll(".prodCard");
-        elements.forEach(ele => observer.observe(ele))
-    }, [])
+function NewDrop() {
+
+    useEffect(() => {
+        // Wrap in context so GSAP runs after render
+        const ctx = gsap.context(() => {
+            gsap.from(".prodCard", {
+                y: 40,
+                opacity: 0,
+                duration: 4,
+                ease: "elastic.inOut",
+                stagger: 0.4, // one by one
+                scrollTrigger: {
+                    trigger: ".NewOuter",
+                    start: "top 80%",
+                    end: "bottom 60%",
+                    scrub: true,
+                    
+                },
+            });
+        });
+
+        // Cleanup GSAP when component unmounts
+        return () => ctx.revert();
+    }, []);
+
 
 
     return (
