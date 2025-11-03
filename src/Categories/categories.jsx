@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import '../Categories/categories.css'
 import Category from '../Const/const';
 import { MdKeyboardArrowLeft } from "react-icons/md";
@@ -11,9 +11,11 @@ const Categories = () => {
     const [display, setdesplay] = useState(0);
     const isRightDisable = display + 3 >= length;
     const isLeftdisable = display === 0;
-    const containerRef = null;
+    const containerRef = useRef(null);
 
     const isSmall = window.innerWidth <= 955;
+    const smlMobile = window.innerWidth <= 580
+    console.log("Small : " + smlMobile);
 
     useEffect(() => {
 
@@ -27,7 +29,6 @@ const Categories = () => {
                 ease: 'power2.inOut'
             })
         }, containerRef)
-        console.log(isSmall);
         return () => ctx.revert();
 
 
@@ -45,13 +46,21 @@ const Categories = () => {
 
     function moverRight() {
         if (isSmall) {
-             display < length ? setdesplay(display + 1) : setdesplay(0)
+            display < length ? setdesplay(display + 1) : setdesplay(0)
         } else {
             display < length ? setdesplay(display + 3) : setdesplay(0);
         }
     }
+
+    function calculate() {
+        let end = display + 3;
+        if (smlMobile) end = display + 1;
+        else if (isSmall) end = display + 2;
+
+        return end;
+    }
     return (
-        <div className='outerLayer'>
+        <div className='outerLayer' ref={containerRef}>
             <div className="innerLayer">
                 <div className="heading">
                     <h1>Category</h1>
@@ -64,7 +73,7 @@ const Categories = () => {
 
                 <div className="items">
                     {
-                        Category.slice(display, display == length ? display - 1 : isSmall ? display + 2 : display + 3).map((category) => {
+                        Category.slice(display, calculate()).map((category) => {
                             return (
                                 <div className="products" key={category.id}>
                                     <img src={category.img} alt="" />
