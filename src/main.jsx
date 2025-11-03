@@ -1,23 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-
-import NavBar from './NavBar.jsx'
-import HeroSection from './HeroSection/HeroSection.jsx'
-import NewDrop from './NewDrop/NewDrop.jsx'
-import Review from './Review/Review.jsx'
-import Footer from './Footer/Footer.jsx'
-import Categories from './Categories/categories.jsx'
+import ReactDom from 'react-dom/client'
+import {BrowserRouter} from 'react-router-dom'
+import App from './App'
 // import Dummy from './Dummy.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <BrowserRouter>
+    <App></App>
 
-
-    <NavBar />
-    <HeroSection />
-    <NewDrop />
-    <Categories></Categories>
-    <Review />
-    <Footer />
-  </StrictMode>,
+  </BrowserRouter>
 )

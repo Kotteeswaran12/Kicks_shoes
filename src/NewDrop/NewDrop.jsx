@@ -3,6 +3,9 @@ import newDrop1 from '../assets/NewDrops/Rectangle 5.png'
 import { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import ProductDetails from '../ProductDetails/ProductDetails';
+import { useNavigate } from 'react-router-dom';
+import { NewDrops } from '../Const/const'
 gsap.registerPlugin(ScrollTrigger);
 
 function NewDrop() {
@@ -21,7 +24,7 @@ function NewDrop() {
                     start: "top 80%",
                     end: "bottom 60%",
                     scrub: true,
-                    
+
                 },
             });
         });
@@ -30,6 +33,7 @@ function NewDrop() {
         return () => ctx.revert();
     }, []);
 
+    const Navigate = useNavigate()
 
 
     return (
@@ -42,34 +46,34 @@ function NewDrop() {
                     </div>
                     <div className="NewDrops" id='NewArrived'>
 
-                        <div className="prodCard">
-                            <div className="badge">new</div>
-                            <img src={newDrop1} alt="" />
-                            <p>ADIDAS 4DFWD X PARLEY RUNNING SHOES</p>
-                            <button>View Product - <span>$125</span></button>
-                        </div>
 
-                        <div className="prodCard">
-                            <div className="badge">new</div>
-                            <img src={newDrop1} alt="" />
-                            <p>ADIDAS 4DFWD X PARLEY RUNNING SHOES</p>
-                            <button>View Product - <span>$125</span></button>
-                        </div>
+                        {
+                            NewDrops.map((prod, i) => {
+                                return (<div className="prodCard" key={i}>
+                                    <div className={`badge ${prod.badge}`}>{prod.badge}</div>
+                                    <img src={newDrop1} alt="" onClick={() => {
+                                        Navigate('/productDetails', {
+                                            state: {
+                                                img: newDrop1,
+                                                name: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
+                                                price: "$125"
+                                            }
+                                        })
+                                    }} />
+                                    <p>{prod.name}</p>
+                                    <button onClick={() => {
+                                        Navigate('/productDetails', {
+                                            state: {
+                                                img: newDrop1,
+                                                name: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
+                                                price: "$125"
+                                            }
+                                        })
+                                    }}>View Product - <span>{prod.price}</span></button>
+                                </div>)
 
-                        <div className="prodCard">
-                            <div className="badge">new</div>
-                            <img src={newDrop1} alt="" />
-                            <p>ADIDAS 4DFWD X PARLEY RUNNING SHOES</p>
-                            <button>View Product - <span>$125</span></button>
-                        </div>
-
-                        <div className="prodCard">
-                            <div className="badge">new</div>
-                            <img src={newDrop1} alt="" />
-                            <p>ADIDAS 4DFWD X PARLEY RUNNING SHOES</p>
-                            <button>View Product - <span>$125</span></button>
-
-                        </div>
+                            })
+                        }
 
                     </div>
                 </div>

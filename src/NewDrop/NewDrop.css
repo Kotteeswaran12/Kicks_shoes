@@ -120,8 +120,14 @@
     justify-content: center;
     color: white;
     font-family: var(--font2);
+    text-transform: capitalize;
 }
-
+.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>.badge.Hot{
+    background-color: rgba(255, 0, 0, 0.787);
+    color: #FFA52F;
+    font-weight: bolder;
+    font-size: 0.8rem;
+}
 
 .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>img {
     border-radius: 20px;

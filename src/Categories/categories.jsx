@@ -1,12 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
 import '../Categories/categories.css'
-import Category from '../Const/const';
+import {Category} from '../Const/const';
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdArrowOutward } from "react-icons/md";
 import gsap from 'gsap';
+import { useNavigate } from 'react-router-dom';
 
 const Categories = () => {
+    const Navigate = useNavigate();
     const length = Category.length;
     const [display, setdesplay] = useState(0);
     const isRightDisable = display + 3 >= length;
@@ -79,7 +81,15 @@ const Categories = () => {
                                     <img src={category.img} alt="" />
                                     <div className="details">
                                         <h2>{category.name}</h2>
-                                        <button><MdArrowOutward></MdArrowOutward></button>
+                                        <button onClick={() => {
+                                            Navigate('/productDetails', {
+                                                state: {
+                                                    img: category.img,
+                                                    name: category.name,
+                                                    price: "$125"
+                                                }
+                                            })
+                                        }}><MdArrowOutward></MdArrowOutward></button>
                                     </div>
                                 </div>
                             )
