@@ -83,12 +83,9 @@ const Categories = () => {
                                         <h2>{category.name}</h2>
                                         <button onClick={() => {
                                             Navigate('/productDetails', {
-                                                state: {
-                                                    img: category.img,
-                                                    name: category.name,
-                                                    price: "$125"
-                                                }
+                                                state:category
                                             })
+                                            window.scrollTo(0,0)
                                         }}><MdArrowOutward></MdArrowOutward></button>
                                     </div>
                                 </div>

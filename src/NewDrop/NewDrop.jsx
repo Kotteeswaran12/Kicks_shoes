@@ -48,27 +48,22 @@ function NewDrop() {
 
 
                         {
-                            NewDrops.map((prod, i) => {
+                            NewDrops.slice(0,4).map((prod, i) => {
                                 return (<div className="prodCard" key={i}>
                                     <div className={`badge ${prod.badge}`}>{prod.badge}</div>
                                     <img src={newDrop1} alt="" onClick={() => {
                                         Navigate('/productDetails', {
-                                            state: {
-                                                img: newDrop1,
-                                                name: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
-                                                price: "$125"
-                                            }
+                                            state: prod,
+                                            
                                         })
+                                        window.scrollTo(0,0)
                                     }} />
                                     <p>{prod.name}</p>
                                     <button onClick={() => {
                                         Navigate('/productDetails', {
-                                            state: {
-                                                img: newDrop1,
-                                                name: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
-                                                price: "$125"
-                                            }
+                                            state:prod
                                         })
+                                        window.scrollTo(0,0);
                                     }}>View Product - <span>{prod.price}</span></button>
                                 </div>)
 

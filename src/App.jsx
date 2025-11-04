@@ -5,7 +5,7 @@ import NavBar from './NavBar.jsx'
 import HeroSection from './HeroSection/HeroSection.jsx'
 import NewDrop from './NewDrop/NewDrop.jsx'
 import Review from './Review/Review.jsx'
-import Footer from './Footer/Footer.jsx'
+
 import Categories from './Categories/categories.jsx'
 import ProductDetails from './ProductDetails/ProductDetails.jsx'
 const App = () => {
@@ -16,12 +16,12 @@ const App = () => {
                 path="/"
                 element={
                     <>
-                        <NavBar />
+                       
                         <HeroSection />
                         <NewDrop />
                         <Categories />
                         <Review />
-                        <Footer />
+                        
                     </>
                 }
             />
