@@ -78,7 +78,7 @@
 }
 
 /* ! Product List */
-.NewOuter>.NewInner>.NewInnerMost>.NewDrops {
+.NewDrops {
     width: 100%;
     display: flex;
     align-items: center;
@@ -88,7 +88,7 @@
 }
 
 /* ! Product cars */
-.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard {
+.NewDrops>.prodCard {
     width: 320px;
     
     
@@ -98,13 +98,13 @@
 
 
 
-.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard.show {
+.NewDrops>.prodCard.show {
     opacity: 1;
 
     transform: translateY(0px);
 }
 
-.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>.badge {
+.NewDrops>.prodCard>.badge {
     width: 70px;
     height: 50px;
     background-color: var(--btncolor);
@@ -122,25 +122,25 @@
     font-family: var(--font2);
     text-transform: capitalize;
 }
-.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>.badge.Hot{
+.NewDrops>.prodCard>.badge.Hot{
     background-color: var(--yello);
-    color:white;
+    color:rgb(0, 0, 0);
     font-weight: bolder;
     font-size: 0.8rem;
 }
 
-.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>img {
+.NewDrops>.prodCard>img {
     border-radius: 20px;
     transition: all 300ms ease-in-out;
 }
 
-.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>img:hover {
+.NewDrops>.prodCard>img:hover {
 
     box-shadow: 0px 3px 6px black;
 
 }
 
-.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>p {
+.NewDrops>.prodCard>p {
     font-family: var(--BoldFont);
     font-size: 0.9rem;
     font-weight: 100;
@@ -149,7 +149,7 @@
 
 }
 
-.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button {
+.NewDrops>.prodCard>button {
     padding: 10px 30px;
     width: 100%;
     height: 45px;
@@ -166,21 +166,21 @@
     margin-bottom: 40px;
 }
 
-.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button>span {
+.NewDrops>.prodCard>button>span {
     color: var(--yello);
 }
 
-.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button:active {
+.NewDrops>.prodCard>button:active {
     opacity: 0.8;
 }
 
-.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button:hover {
+.NewDrops>.prodCard>button:hover {
     background-color: rgb(56, 55, 55);
 }
 
 
 @media (max-width:1712px) {
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops {
+    .NewDrops {
         flex-wrap: wrap;
     }
 }
@@ -206,17 +206,17 @@
         width: 400px;
     }
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard {
+    .NewDrops>.prodCard {
         width: 220px;
 
     }
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>img {
+  .NewDrops>.prodCard>img {
         width: 100%;
 
     }
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button {
+    .NewDrops>.prodCard>button {
         font-size: 0.9rem;
     }
 
@@ -241,7 +241,7 @@
 
     }
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>.badge {
+    .NewDrops>.prodCard>.badge {
         width: 50px;
         height: 40px;
         font-size: 0.7rem;
@@ -253,7 +253,7 @@
         margin: 0% 5%;
     }
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>.badge {
+    .NewDrops>.prodCard>.badge {
         width: 35px;
         height: 35px;
         font-size: 0.6rem;
@@ -267,12 +267,12 @@
 
     }
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>img {
+   .NewDrops>.NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>img {
         object-fit: cover;
         width: 100%;
     }
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button {
+   .NewDrops>.prodCard>button {
         font-size: 0.7rem;
         font-weight: normal;
         font-family: var(--font2);
@@ -281,12 +281,12 @@
 
 @media (max-width:500px) {
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard {
+    .NewDrops>.prodCard {
         width: 200px;
 
     }
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>img:hover {
+    .NewDrops>.prodCard>img:hover {
         transform: none;
         box-shadow: none;
 
@@ -297,18 +297,18 @@
 
 @media (max-width:452px) {
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard {
+    .NewDrops>.prodCard {
         width: 170px;
 
     }
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button {
+    .NewDrops>.prodCard>button {
 
         font-size: 0.6rem;
 
     }
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>p {
+    .NewDrops>.prodCard>p {
         font-family: var(--font2);
         font-size: 0.8rem;
         font-weight: bolder;
@@ -316,7 +316,7 @@
 
     }
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>img:hover {
+    .NewDrops>.prodCard>img:hover {
         transform: none
             /* box-shadow: 0px 3px 6px black; */
 
@@ -340,7 +340,7 @@
     }
 
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>.badge {
+    .NewDrops>.prodCard>.badge {
         width: 30px;
         height: 30px;
         font-size: 0.5rem;
@@ -349,18 +349,18 @@
 
 @media (max-width:384px) {
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard {
+ .NewDrops>.prodCard {
         width: 150px;
 
     }
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button {
+    .NewDrops>.prodCard>button {
 
         font-size: 0.5rem;
 
     }
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>p {
+    .NewDrops>.prodCard>p {
         font-family: var(--font2);
         font-size: 0.7rem;
         font-weight: bolder;
@@ -371,19 +371,19 @@
 }
 
 @media (max-width:337px) {
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard {
+   .NewDrops>.prodCard {
         width: 120px;
 
     }
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>p {
+    .NewDrops>.prodCard>p {
         font-family: var(--font2);
         font-size: 0.6rem;
         font-weight: 400;
 
     }
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>button {
+    .NewDrops>.prodCard>button {
         padding: 10px 5px;
         width: 100%;
         height: 45px;
@@ -394,7 +394,7 @@
 
     }
 
-    .NewOuter>.NewInner>.NewInnerMost>.NewDrops>.prodCard>.badge {
+    .NewDrops>.prodCard>.badge {
         width: 20px;
         height: 20px;
         font-size: 0.4rem;

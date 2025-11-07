@@ -8,6 +8,7 @@ import Review from './Review/Review.jsx'
 
 import Categories from './Categories/categories.jsx'
 import ProductDetails from './ProductDetails/ProductDetails.jsx'
+import Login from './Login/Login.jsx'
 const App = () => {
     return (
         <Routes>
@@ -27,6 +28,8 @@ const App = () => {
             />
 
             <Route path='productDetails' element={<ProductDetails />}/>
+
+            <Route path='login' element={<Login/>}/>
 
         </Routes>
     )

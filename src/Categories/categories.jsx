@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import '../Categories/categories.css'
-import {Category} from '../Const/const';
+import { Category } from '../Const/const';
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdArrowOutward } from "react-icons/md";
@@ -78,14 +78,19 @@ const Categories = () => {
                         Category.slice(display, calculate()).map((category) => {
                             return (
                                 <div className="products" key={category.id}>
-                                    <img src={category.img} alt="" />
+                                    <img src={category.img[0]} alt="" onClick={() => {
+                                        Navigate('/productDetails', {
+                                            state: category
+                                        })
+                                        window.scrollTo(0, 0)
+                                    }} />
                                     <div className="details">
                                         <h2>{category.name}</h2>
                                         <button onClick={() => {
                                             Navigate('/productDetails', {
-                                                state:category
+                                                state: category
                                             })
-                                            window.scrollTo(0,0)
+                                            window.scrollTo(0, 0)
                                         }}><MdArrowOutward></MdArrowOutward></button>
                                     </div>
                                 </div>

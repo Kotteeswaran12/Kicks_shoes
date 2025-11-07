@@ -1,11 +1,8 @@
 import './NewDrop.css'
-import newDrop1 from '../assets/NewDrops/Rectangle 5.png'
 import { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import ProductDetails from '../ProductDetails/ProductDetails';
-import { useNavigate } from 'react-router-dom';
-import { NewDrops } from '../Const/const'
+import ProdCards from './ProdCards'
 gsap.registerPlugin(ScrollTrigger);
 
 function NewDrop() {
@@ -33,8 +30,6 @@ function NewDrop() {
         return () => ctx.revert();
     }, []);
 
-    const Navigate = useNavigate()
-
 
     return (
         <div className="NewOuter" >
@@ -44,33 +39,7 @@ function NewDrop() {
                         <h1>Don’t miss out <span>new drops</span></h1>
                         <button>SHOP NEW DROPS</button>
                     </div>
-                    <div className="NewDrops" id='NewArrived'>
-
-
-                        {
-                            NewDrops.slice(0,4).map((prod, i) => {
-                                return (<div className="prodCard" key={i}>
-                                    <div className={`badge ${prod.badge}`}>{prod.badge}</div>
-                                    <img src={newDrop1} alt="" onClick={() => {
-                                        Navigate('/productDetails', {
-                                            state: prod,
-                                            
-                                        })
-                                        window.scrollTo(0,0)
-                                    }} />
-                                    <p>{prod.name}</p>
-                                    <button onClick={() => {
-                                        Navigate('/productDetails', {
-                                            state:prod
-                                        })
-                                        window.scrollTo(0,0);
-                                    }}>View Product - <span>{prod.price}</span></button>
-                                </div>)
-
-                            })
-                        }
-
-                    </div>
+                    <ProdCards></ProdCards>
                 </div>
 
             </div>
