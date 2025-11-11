@@ -1,6 +1,5 @@
 import './NewDrop.css'
 import { NewDrops } from '../Const/const'
-import newDrop1 from '../assets/NewDrops/Rectangle 5.png'
 import { useNavigate } from 'react-router-dom'
 function ProdCards() {
     const Navigate = useNavigate()

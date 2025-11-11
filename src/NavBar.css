@@ -108,6 +108,7 @@ nav>.navbar>.box:nth-child(3)>img {
 
 nav>.navbar>.box:nth-child(3)>.img {
     font-size: 20px;
+    cursor: pointer;
 }
 
 nav>.navbar>.box:nth-child(3)>.count {

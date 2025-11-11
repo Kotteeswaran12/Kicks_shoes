@@ -1,0 +1,174 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.RegisterOuter {
+    padding: 2% 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-evenly;
+}
+
+.RegisterOuter>.Login {
+    width: 560px;
+
+}
+
+.RegisterOuter>.Login>h1 {
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.RegisterOuter>.Login>p:nth-child(2) {
+    text-decoration: underline;
+}
+
+.RegisterOuter>.Login>.LoginUp {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 15px;
+    font-size: 2rem;
+}
+
+.RegisterOuter>.Login>.LoginUp>.icons {
+    width: 150px;
+    height: 70px;
+    border: 1px solid black;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all ease-in-out 500ms;
+}
+
+.Login>.LoginUp>.icons:hover {
+    transform: translateY(-10px) translateX(5px);
+    box-shadow: 2px 3px 4px black;
+}
+
+.RegisterOuter>.Login>p {
+    font-size: 1rem;
+    margin: 15px 0px;
+}
+
+.RegisterOuter>.Login>form>.Name {
+    width: 100%;
+    /* background-color: red; */
+
+    h1 {
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+
+    input {
+        width: 100%;
+        height: 50px;
+        display: block;
+        margin-top: 20px;
+        padding: 0px 30px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+}
+
+.RegisterOuter>.Login>form>.Gender {
+    margin: 10px 0px;
+
+    h1 {
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+}
+
+.RegisterOuter>.Login>form>.Gender>.GenderOuter {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    justify-content: space-evenly;
+}
+
+/* .RegisterOuter>.Login>form>.Gender>.GenderOuter > .male input {
+    width: 15px;
+    color: white;
+} */
+
+.RegisterOuter>.Login>form>.LoginDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 280px;
+    margin-bottom: 10px;
+
+    h1 {
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+
+    input {
+        width: 100%;
+        height: 50px;
+        display: block;
+        margin-top: 20px;
+        padding: 0px 30px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    p {
+        opacity: 0.5;
+        font-size: 1rem;
+    }
+}
+
+.RegisterOuter>.Login>form>.checkBox {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+
+    input {
+        width: 15px;
+    }
+}
+
+.RegisterOuter>.Login>form>button {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+    text-transform: uppercase;
+    border: none;
+    background-color: var(--grey);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px 0px;
+}
+
+.RegisterOuter>.Login>form>button:hover {
+    opacity: 0.9;
+}
+
+@media (max-width:500px) {
+    .RegisterOuter>.Login>.LoginUp>.icons {
+        width: 100px;
+
+    }
+}
+
+@media (max-width:360px) {
+    .RegisterOuter>.Login>.LoginUp>.icons {
+        width: 70px;
+     
+    }
+}

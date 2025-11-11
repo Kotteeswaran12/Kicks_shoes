@@ -16,8 +16,9 @@ let ProductDetails = (Details) => {
         content: "active"
     })
     const { name, price, img, badge, size, color, abt } = location.state;
-    const [imgDisplay, setImgDisplay] = useState(0);
     const isMobile = window.innerWidth <= 642;
+    const [imgDisplay, setImgDisplay] = useState(isMobile? 0 : null);
+    console.log(isMobile);
     return (
         <>
 
@@ -28,14 +29,14 @@ let ProductDetails = (Details) => {
 
                         {isMobile &&
                             (
-                                <img src={img[imgDisplay]} alt="" />
+                                <img src={img[imgDisplay== null ? 0: imgDisplay]} alt="" />
 
                             )
                         }
                         {
                             img.map((img, i) => (
                                 i != imgDisplay && (
-                                    <img src={img} alt="" key={i} onClick={() => { setImgDisplay(i) }} aria-disabled />
+                                    <img src={img} alt="" key={i} onClick={() => { if(isMobile){setImgDisplay(i)} }}  />
                                 )
 
 

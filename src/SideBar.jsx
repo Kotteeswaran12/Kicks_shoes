@@ -8,10 +8,12 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { RiWomenFill } from "react-icons/ri";
 import { FaMars } from "react-icons/fa";
-
+import { useNavigate } from 'react-router-dom';
 
 const SideBar = ({ menu, setMenu }) => {
     //    console.log(menu)/
+
+    const navigate = useNavigate();
     return (
         <div className={`sidebar ${menu ? 'open' : ''}`} onClick={() => { setMenu(false) }} >
             <div className="listOf">
@@ -22,10 +24,10 @@ const SideBar = ({ menu, setMenu }) => {
 
                 <div className="orderList">
                     <ul>
-                        <li ><a href="#NewArrived"><HiMiniRocketLaunch className='Rocket'/><span>new</span> Drop</a></li>
+                        <li ><a href="/#NewArrived"><HiMiniRocketLaunch className='Rocket'/><span>new</span> Drop</a></li>
                         <li className='Men'><FaMars className='Men' />Men</li>
                         <li className='Women' ><RiWomenFill className='Women' />Women</li>
-                        <li className='Login' > <GoPersonFill className='img' /> Login</li>
+                        <li className='Login' onClick={()=>{navigate("/login")}} > <GoPersonFill className='img' /> Login</li>
                     </ul>
                 </div>
                 <div className="socialmedia">

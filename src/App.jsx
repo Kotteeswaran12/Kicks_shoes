@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-
+import Register from './Login/Register.jsx'
 import NavBar from './NavBar.jsx'
 import HeroSection from './HeroSection/HeroSection.jsx'
 import NewDrop from './NewDrop/NewDrop.jsx'
@@ -30,7 +30,7 @@ const App = () => {
             <Route path='productDetails' element={<ProductDetails />}/>
 
             <Route path='login' element={<Login/>}/>
-
+            <Route path='register' element={<Register/>}></Route>
         </Routes>
     )
 }
