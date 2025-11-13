@@ -1,3 +1,4 @@
+import ProdList from './ProdList/ProdList.jsx'
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Register from './Login/Register.jsx'
@@ -31,6 +32,7 @@ const App = () => {
 
             <Route path='login' element={<Login/>}/>
             <Route path='register' element={<Register/>}></Route>
+            <Route path='Products' element={<ProdList/>}></Route>
         </Routes>
     )
 }

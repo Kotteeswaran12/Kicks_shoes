@@ -20,7 +20,7 @@ const NavBar = () => {
 
                     }} />
                     <ul >
-                        <li ><a href="#NewArrived">New Drops🔥</a></li>
+                        <li onClick={()=>navigation("/products")}><a >New Drops🔥</a></li>
                         <li>Men</li>
                         <li>women</li>
                     </ul>
