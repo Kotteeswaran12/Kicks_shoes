@@ -1,0 +1,91 @@
+import React, { useState } from 'react'
+import { Category } from '../Const/const'
+
+const Filer = () => {
+
+    const { size, color } = Category;
+    const [Sizeselected, setSizeseleted] = useState(0);
+    const [colors, setColor] = useState(0);
+    const [Price, setPrice] = useState(500);
+
+    const [fiterData, setFilterData] = useState({
+        size: 0,
+        color: '',
+        gender: '',
+        price: 0,
+
+    })
+    function handelFilter(data) {
+        console.log(Object.keys(data)[0]);
+        setFilterData(prev => ({ ...prev, [Object.keys(data)[0]]: Object.values(data)[0] }))
+        console.log(fiterData);
+
+    }
+    return (
+        <>
+            <div className="filter">
+                <h1>Filters</h1>
+                <div className="filterBy">
+                    <h3>Filter By</h3>
+
+                    <div className="filterBtn">
+                        <Btn text={"mens"} ></Btn>
+                        <Btn text={"Casuals"}></Btn>
+                    </div>
+                </div>
+                <div className="size">
+                    <h3>Size</h3>
+                    <div className="SizeList">
+
+
+                        {
+                            size.map((s, i) => {
+                                return (
+                                    <div className={`SizeBox ${Sizeselected == i ? "active" : ''}`} onClick={() => { setSizeseleted(i); handelFilter({ size: s }); }} key={i}>{s}</div>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+
+                <div className="colors">
+                    <h3>Colors</h3>
+                    <div className="ColorList">
+
+
+                        {
+                            color.map((c, i) => {
+                                return (
+                                    <div className={`ColorBox ${colors == i ? 'active' : ''}`} style={{ backgroundColor: `${c}` }} key={i} onClick={() => { handelFilter({ color: c }); setColor(i) }}></div>
+                                )
+                            })
+                        }
+
+
+                    </div>
+                </div>
+
+                <div className="gender">
+                    <h3>Gender</h3>
+                    <div className="men">
+                        <input type="checkbox" name="Men" id="Men" />
+                        <label htmlFor="Men" onClick={() => { handelFilter({ gender: "Men" }) }}>Men</label>
+                    </div>
+                    <div className="women">
+                        <input type="checkbox" name="Women" id="Women" />
+                        <label htmlFor="Women" onClick={() => { handelFilter({ gender: "Women" }) }}>Women</label>
+                    </div>
+                </div>
+
+                <div className="price">
+                    <h3>Price</h3>
+                    <input type="range" name="price" id="price" min={1000} max={10000} step={100} onChange={(e) => { setPrice(e.target.value); handelFilter({ price: e.target.value }) }} />
+                    <p>RS : {Price}</p>
+                </div>
+                < Btn text={"Submit"} color={"black"} />
+            </div>
+        </>
+    )
+}
+
+export default Filer

@@ -1,0 +1,28 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.ClubDetails>ul {
+    /* background-color: red; */
+    padding: 0px 15px;
+}
+
+@media (max-width:800px) {
+    .ClubDetails {
+        padding: 20px 20px;
+        /* background-color: red; */
+    }
+
+    .ClubDetails>h1 {
+        font-size: 1.3rem;
+        text-transform: capitalize;
+        font-weight: bolder;
+    }
+
+    .ClubDetails>ul {
+        /* background-color: red; */
+        padding: 0px 15px;
+    }
+}

@@ -1,0 +1,124 @@
+
+import { useLocation } from "react-router-dom";
+import './ProductDetails.css';
+import { FiHeart } from "react-icons/fi";
+import ProdCards from "../NewDrop/ProdCards";
+import { useState } from "react";
+// import { cart } from "../Const/const";
+let ProductDetails = (Details) => {
+    const location = useLocation();
+
+    const [colorActive, SetColorActive] = useState({
+        id: 0,
+        content: "active"
+    })
+    const [sizeActive, SetSizeActive] = useState({
+        id: 0,
+        content: "active"
+    })
+
+    const cart = [];
+    const { name, price, img, badge, size, color, abt } = location.state;
+    const isMobile = window.innerWidth <= 642;
+    const [imgDisplay, setImgDisplay] = useState(isMobile ? 0 : null);
+    console.log(isMobile);
+    return (
+        <>
+
+            <div className="ProdDetailsOuter">
+
+                <div className="ProdFullView">
+                    <div className="ProdImg">
+
+                        {isMobile &&
+                            (
+                                <img src={img[imgDisplay == null ? 0 : imgDisplay]} alt="" />
+
+                            )
+                        }
+                        {
+                            img.map((img, i) => (
+                                i != imgDisplay && (
+                                    <img src={img} alt="" key={i} onClick={() => { if (isMobile) { setImgDisplay(i) } }} />
+                                )
+
+
+                            ))
+                        }
+                    </div>
+
+                    <div className="ProdDetails">
+                        <div className={`badge ${badge}`}>{badge}</div>
+                        <h1 className="ProdName">{name}</h1>
+                        <h2 className="ProdPrice">{price}</h2>
+
+                        <div className="ProdColor">
+                            <h1>Color</h1>
+                            <div className="ListColor">
+                                {
+                                    color.map((color, i) => (
+                                        <div className={`ColorOuter ${colorActive.id == i ? colorActive.content : ""}`} key={i}>
+
+                                            <div className={`colors ${color}`} onClick={() => { SetColorActive({ id: i, content: "active" }) }}></div>
+
+                                        </div>
+
+                                    ))
+                                }
+                            </div>
+
+                        </div>
+
+                        <div className="ProdSize">
+                            <div className="textFlex">
+                                <h1>Size</h1>
+                                <h1>Size Chart</h1>
+                            </div>
+                            <div className="SizeList">
+                                {
+                                    size.map((size, i) => {
+                                        return (
+                                            <div className={`ListSizes ${sizeActive.id == i ? sizeActive.content : ""}`} key={i} onClick={() => { SetSizeActive({ id: i, content: "active" }) }}>{size}</div>
+                                        )
+                                    })
+                                }
+                            </div>
+
+                        </div>
+
+                        <div className="ProdBtns">
+                            <div className="addToCart">
+                                <button onClick={() =>{ cart.push({
+                                    img: [],
+                                    name: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
+                                    price: "$125",
+                                    badge: "Hot",
+                                    size: [38, 39, 40, 41, 42, 43, 44, 45, 46, 47],
+                                    color: ['#4A69E2', "#FFA52F", "#232321", "#234D41", "#F08155", "#C9CCC6", "#677282", "#925513", "#BB8056"],
+                                    abt: `Shadow Navy / Army Green \n\nThis product is excluded from all promotional discounts and offers.\n\nPay over time in interest- free installments with Affirm, Klarna or Afterpay.\n\n Join adiClub to get unlimited free standard shipping, returns, & exchanges.`,
+                                }); console.log(cart);} } >Add to cart</button>
+                                <div className="like">
+                                    <FiHeart></FiHeart>
+                                </div>
+                            </div>
+
+                            <button>Buy it now</button>
+                        </div>
+
+                        <div className="AboutProd">
+                            <h1>ABOUT THE PRODUCT</h1>
+                            <p>{abt}</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <h1 className="mayLike">ALSO YOU MAY LIKE</h1>
+                <ProdCards></ProdCards>
+            </div>
+
+        </>
+    )
+}
+
+export default ProductDetails;

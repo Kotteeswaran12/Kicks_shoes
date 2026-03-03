@@ -1,0 +1,11 @@
+*{
+    padding: 0%;
+     /* margin: 2% 10%; */
+     margin: 0%;
+    box-sizing: border-box;
+}
+
+.cartOuter{
+     margin: 2% 10%;
+}
+
