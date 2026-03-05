@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Btn = ({text , color} ) => {
+const Btn = ({text , color , onClick} ) => {
  
   return (
     <div>
@@ -16,7 +16,7 @@ const Btn = ({text , color} ) => {
                 fontWeight:'bolder',
                 borderRadius:'5px'
             }}
-        >{text}</button>
+        onClick={()=> onClick?.()}>{text}</button>
     </div>
   )
 }

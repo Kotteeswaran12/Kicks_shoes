@@ -140,12 +140,15 @@
 .ProdFullView>.ProdDetails>.ProdColor>.ListColor>.ColorOuter.active {
     border: 2px solid rgb(0, 0, 0);
 }
-
+.ProdFullView>.ProdDetails>.ProdColor>.ListColor>.ColorOuter>.colors{
+     width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
 .ProdFullView>.ProdDetails>.ProdColor>.ListColor>.ColorOuter>.colors.red {
     width: 30px;
     height: 30px;
     background-color: rgba(255, 0, 0, 0.783);
-    border-radius: 50%;
     cursor: pointer;
 }
 

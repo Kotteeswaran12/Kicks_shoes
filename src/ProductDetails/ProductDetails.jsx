@@ -5,7 +5,7 @@ import { FiHeart } from "react-icons/fi";
 import ProdCards from "../NewDrop/ProdCards";
 import { useState } from "react";
 // import { cart } from "../Const/const";
-let ProductDetails = (Details) => {
+let ProductDetails = () => {
     const location = useLocation();
 
     const [colorActive, SetColorActive] = useState({
@@ -18,7 +18,10 @@ let ProductDetails = (Details) => {
     })
 
     const cart = [];
+
     const { name, price, img, badge, size, color, abt } = location.state;
+
+    console.log(color);
     const isMobile = window.innerWidth <= 642;
     const [imgDisplay, setImgDisplay] = useState(isMobile ? 0 : null);
     console.log(isMobile);
@@ -57,9 +60,9 @@ let ProductDetails = (Details) => {
                             <div className="ListColor">
                                 {
                                     color.map((color, i) => (
-                                        <div className={`ColorOuter ${colorActive.id == i ? colorActive.content : ""}`} key={i}>
+                                        <div className={`ColorOuter ${colorActive.id === i ? colorActive.content : ""}`} key={i}>
 
-                                            <div className={`colors ${color}`} onClick={() => { SetColorActive({ id: i, content: "active" }) }}></div>
+                                            <div className={`colors`} style={{backgroundColor:color}}  onClick={() => { SetColorActive({ id: i, content: "active" }) }}></div>
 
                                         </div>
 

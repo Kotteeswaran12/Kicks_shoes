@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { use, useState } from 'react'
 import ProdBanner from '../assets/image 14.png';
 import './ProdList.css'
 import ProdCards from '../NewDrop/ProdCards';
 import { Category } from '../Const/const';
 import Btn from '../Components/Btn';
-
+import { Filters } from './Filters';
 const ProdList = () => {
 
     const isMobile = window.innerWidth <= 955;
@@ -15,7 +15,7 @@ const ProdList = () => {
 
     const [{ size, color }] = Category;
     const [colors, setColor] = useState(0);
-
+    const[showFilter , setShowFilter] = useState(false);
     const [fiterData, setFilterData] = useState({
         size: 0,
         color: '',
@@ -58,11 +58,13 @@ const ProdList = () => {
                             <option value="New Drops">New Drops</option>
                             <option value="Offers">Offers</option>
                         </select>
-                        <Btn text={"Filter"} color={"Black"}></Btn>
+                        <Btn text={"Filter"} color={"Black"} onClick={()=> setShowFilter( !showFilter )}></Btn>
                     </div> : ''
                 }
             </div>
-
+                {
+                    showFilter && <Filters></Filters>
+                }
 
             <div className="ProdLists">
                 {
