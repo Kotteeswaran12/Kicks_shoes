@@ -18,12 +18,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .ProdListOuter>.banner {
     position: relative;
     /* width: 100%; */
 }
+
 
 .ProdListOuter .banner>.text {
     position: absolute;
@@ -168,7 +170,6 @@
         border: 1px solid rgba(0, 0, 0, 0.285);
         cursor: pointer;
         display: flex;
-
         align-items: center;
         justify-content: center;
         font-size: 0.9rem;
@@ -205,7 +206,7 @@
 
     .ColorBox.active {
         border: 2px solid rgba(0, 0, 0, 0.568);
-        
+
 
 
     }
@@ -247,11 +248,56 @@
         width: 100%;
         padding: 0px;
     }
+
+    .ProdListOuter .banner>img {
+        object-fit: fill;
+        height: 250px;
+    }
+
+    .ProdListOuter .banner>.text {
+        top: 20%;
+        width: 550px;
+
+        p {
+            width: 500px;
+            font-size: 1rem;
+            text-wrap: wrap;
+
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+    }
 }
 
 @media (max-width:620px) {
     .ProdListOuter>.prodTitles>h1 {
         font-size: 1.5rem;
+    }
+
+    .ProdListOuter>.banner>img {
+        /* width: fit-content; */
+        /* display: none; */
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .ProdListOuter .banner>.text {
+
+        width: 550px;
+
+        p {
+            width: 350px;
+            font-size: 1rem;
+            text-wrap: wrap;
+
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
     }
 }
 
@@ -264,9 +310,11 @@
     .ProdListOuter>.prodTitles {
         height: 100px;
     }
-      .ProdListOuter>.prodTitles>.M{
+
+    .ProdListOuter>.prodTitles>.M {
         flex-direction: column;
-      }
+    }
+
     .ProdListOuter>.prodTitles>.M>select {
         /* width: 80px; */
         height: 35px;
@@ -285,6 +333,29 @@
 
 }
 
+@media (max-width:424px) {
+    .ProdListOuter .banner>img {
+        object-fit: fill;
+        height: 250px;
+    }
+
+    .ProdListOuter .banner>.text {
+        top: 20%;
+        width: 550px;
+
+        p {
+            width: 300px;
+            font-size: 0.8rem;
+            text-wrap: wrap;
+
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+}
+
 @media (max-width:400px) {
     .ProdListOuter>.prodTitles>h1 {
         font-size: 1rem;
@@ -292,4 +363,29 @@
     }
 
 
+
+
+}
+
+@media (max-width:367px) {
+    .ProdListOuter .banner>img {
+        object-fit: fill;
+        height: 200px;
+    }
+
+    .ProdListOuter .banner>.text {
+        top: 20%;
+        width: 550px;
+
+        p {
+            width: 250px;
+            font-size: 0.6rem;
+            text-wrap: wrap;
+
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
 }

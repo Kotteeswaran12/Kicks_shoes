@@ -9,7 +9,7 @@ import Footer from './Footer/Footer.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-     <NavBar />
+     
     <App></App>
     <Footer />
 

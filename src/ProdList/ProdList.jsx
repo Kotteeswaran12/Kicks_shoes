@@ -5,7 +5,10 @@ import ProdCards from '../NewDrop/ProdCards';
 import { Category } from '../Const/const';
 import Btn from '../Components/Btn';
 import { Filters } from './Filters';
+
 const ProdList = () => {
+
+   
 
     const isMobile = window.innerWidth <= 955;
     console.log(isMobile);
@@ -63,7 +66,7 @@ const ProdList = () => {
                 }
             </div>
                 {
-                    showFilter && <Filters ></Filters>
+                    showFilter && <Filters setShowFilter={setShowFilter} ></Filters>
                 }
 
             <div className="ProdLists">

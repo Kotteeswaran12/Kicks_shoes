@@ -3,10 +3,11 @@ import './HeroSection.css'
 import bgImg from '../assets/HeroImgs/image 14.png'
 import smlImg1 from '../assets/HeroImgs/Rectangle 1.png'
 import smlImg2 from '../assets/HeroImgs/Rectangle 2.png'
-
+import { useNavigate } from 'react-router-dom'
 
 const HeroSection = () => {
 
+  const Navigate = useNavigate();
 
   return (
     <div className='Outer'>
@@ -26,7 +27,7 @@ const HeroSection = () => {
         <div className="content">
           <h1>NIKE AIR MAX</h1>
           <p>Nike introducing the new air max for everyone's comfort</p>
-          <button>SHOP NOW</button>
+          <button onClick={()=> Navigate("/products")}>SHOP NOW</button>
         </div>
       </div>
     </div>

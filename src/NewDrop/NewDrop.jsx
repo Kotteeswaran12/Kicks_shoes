@@ -4,9 +4,12 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import ProdCards from './ProdCards'
 import Btn from '../Components/Btn';
+import { useNavigate } from 'react-router-dom';
 gsap.registerPlugin(ScrollTrigger);
 
 function NewDrop() {
+
+    const Navigate = useNavigate();
 
     useEffect(() => {
         // Wrap in context so GSAP runs after render
@@ -38,9 +41,10 @@ function NewDrop() {
                 <div className="NewInnerMost">
                     <div className="NewHeading">
                         <h1>Don’t miss out <span>new drops</span></h1>
-                        <Btn text={"SHOP NEW DROPS"} color={"#4A69E2"}></Btn>
+                        {/* <Btn text={"SHOP NEW DROPS"} color={"#4A69E2"} onClick={Navigate("/Products")}></Btn> */}
+                        <button onClick={()=> Navigate("/products")}>SHOP NEW DROPS</button>
                     </div>
-                    <ProdCards></ProdCards>
+                    <ProdCards ></ProdCards>
                 </div>
 
             </div>

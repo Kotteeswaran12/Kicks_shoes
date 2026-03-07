@@ -3,25 +3,27 @@ import { useState } from 'react';
 import Btn from '../Components/Btn';
 import { Category } from '../Const/const';
 import './Filetrs.css'
-export const Filters = () => {
+export const Filters = ({setShowFilter}) => {
     const [Price, setPrice] = useState(500);
     const [{ size, color }] = Category;
     const [colors, setColor] = useState(0);
     const [Sizeselected, setSizeseleted] = useState(0);
+
+    // console.log(setShowFilter);
     return (
         <div className='filterMOuter'>
             <div className="filterM">
                 <div className="head">
                     <h1>Filters</h1>
 
-                    <button>X</button>
+                    <button onClick={()=>setShowFilter(false)}>X</button>
                 </div>
                 <div className="filterBy">
                     <h3>Filter By</h3>
 
                     <div className="filterBtn">
-                        <Btn text={"mens"} ></Btn>
-                        <Btn text={"Casuals"}></Btn>
+                        <Btn text={"mens"} color={"#4A69E2"} ></Btn>
+                        <Btn text={"Casuals"} color={"#4A69E2"}></Btn>
                     </div>
                 </div>
                 <div className="size">
@@ -47,7 +49,7 @@ export const Filters = () => {
                         {
                             color.map((c, i) => {
                                 return (
-                                    <div className={`ColorBox ${colors == i ? 'active' : ''}`} style={{ backgroundColor: `${c}`, width: '20px', height: '20px' }} key={i} onClick={() => { ; setColor(i) }}></div>
+                                    <div className={`ColorBox ${colors == i ? 'active' : ''}`} style={{ backgroundColor: `${c}` }} key={i} onClick={() => { ; setColor(i) }}></div>
                                 )
                             })
                         }
@@ -73,7 +75,7 @@ export const Filters = () => {
                     <input type="range" name="price" id="price" min={1000} max={10000} step={100} onChange={(e) => { setPrice(e.target.value); }} />
                     <p>RS : {Price}</p>
                 </div>
-                < Btn text={"Submit"} color={"black"} />
+                < Btn text={"Submit"} color={"black"} onClick={setShowFilter}/>
             </div></div>
     )
 }

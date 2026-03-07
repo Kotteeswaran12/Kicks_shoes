@@ -4,9 +4,15 @@ import './ProductDetails.css';
 import { FiHeart } from "react-icons/fi";
 import ProdCards from "../NewDrop/ProdCards";
 import { useState } from "react";
+import { CartContext } from '../App';
+import { useContext } from 'react';
+import { FaHeart } from "react-icons/fa";
 // import { cart } from "../Const/const";
 let ProductDetails = () => {
     const location = useLocation();
+
+    const {   setCart} = useContext(CartContext);
+    // console.log();
 
     const [colorActive, SetColorActive] = useState({
         id: 0,
@@ -16,15 +22,13 @@ let ProductDetails = () => {
         id: 0,
         content: "active"
     })
-
-    const cart = [];
-
+    const {like , setLike}  = useContext(CartContext);
+    
     const { name, price, img, badge, size, color, abt } = location.state;
 
-    console.log(color);
     const isMobile = window.innerWidth <= 642;
     const [imgDisplay, setImgDisplay] = useState(isMobile ? 0 : null);
-    console.log(isMobile);
+    
     return (
         <>
 
@@ -91,17 +95,9 @@ let ProductDetails = () => {
 
                         <div className="ProdBtns">
                             <div className="addToCart">
-                                <button onClick={() =>{ cart.push({
-                                    img: [],
-                                    name: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
-                                    price: "$125",
-                                    badge: "Hot",
-                                    size: [38, 39, 40, 41, 42, 43, 44, 45, 46, 47],
-                                    color: ['#4A69E2', "#FFA52F", "#232321", "#234D41", "#F08155", "#C9CCC6", "#677282", "#925513", "#BB8056"],
-                                    abt: `Shadow Navy / Army Green \n\nThis product is excluded from all promotional discounts and offers.\n\nPay over time in interest- free installments with Affirm, Klarna or Afterpay.\n\n Join adiClub to get unlimited free standard shipping, returns, & exchanges.`,
-                                }); console.log(cart);} } >Add to cart</button>
-                                <div className="like">
-                                    <FiHeart></FiHeart>
+                                <button onClick={() =>{ setCart(prevCart => [...prevCart, location.state])} } >Add to cart</button>
+                                <div className="like" onClick={()=> setLike(!like)}>
+                                  { !like?  <FiHeart></FiHeart> : <FaHeart /> }
                                 </div>
                             </div>
 
