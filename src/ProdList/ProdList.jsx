@@ -63,7 +63,7 @@ const ProdList = () => {
                 }
             </div>
                 {
-                    showFilter && <Filters></Filters>
+                    showFilter && <Filters ></Filters>
                 }
 
             <div className="ProdLists">
