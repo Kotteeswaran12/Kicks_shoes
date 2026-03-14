@@ -57,7 +57,7 @@ let ProductDetails = () => {
                     <div className="ProdDetails">
                         <div className={`badge ${badge}`}>{badge}</div>
                         <h1 className="ProdName">{name}</h1>
-                        <h2 className="ProdPrice">{price}</h2>
+                        <h2 className="ProdPrice">${price}</h2>
 
                         <div className="ProdColor">
                             <h1>Color</h1>

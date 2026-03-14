@@ -1,11 +1,126 @@
-*{
+* {
     padding: 0%;
-     /* margin: 2% 10%; */
-     margin: 0%;
+    /* margin: 2% 10%; */
+    margin: 0%;
     box-sizing: border-box;
 }
 
-.cartOuter{
-     margin: 2% 10%;
+.outerMost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 10%;
+
+    /* background-color: red; */
 }
 
+/* ── Outer Wrapper ── */
+.cartOuter {
+    /* font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+    width: 100%;
+
+    /* margin: 2% 5%; */
+    /* padding: 2% 5%; */
+    padding: 20px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.cartOuter>.CartOneLine {
+    width: 782px;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.cartOuter>.CartOneLine>h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cartOuter>.emptyCart {
+    text-align: center;
+    padding: 40px 0;
+    border: 1px solid #ddd;
+    margin: 20px;
+}
+
+.cartOuter>.emptyCart>h1 {
+    font-size: 2rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    margin-bottom: 10px;
+}
+
+.cartOuter>.emptyCart>p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+
+.cartOuter>.cartMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width:100%;
+    gap: 30px;
+    padding: 10px 20px;
+}
+.cartOuter > .cartMain > .CartList {
+    width: 70%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cartOuter > .cartMain > .CartList > .cartCard {
+    display: flex;
+    width:100%;
+  
+  
+}
+
+.cartOuter > .cartMain > .CartList > .cartCard > img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.cartOuter > .cartMain > .CartList > .cartCard > .nameAndP{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+   /* align-items: center; */
+    h2{
+        font-size: 1.2rem;
+    }
+}
+/* .cartOuter .cartItem {       */
+
+.cartOuter > .cartMain > .Checkout{
+    background-color: red;
+    width: 30%;
+    height: 500px;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width:1057px) {
+    .cartOuter>.CartOneLine {
+        width: calc(100% / 1.2);
+        font-size: 1rem;
+        font-weight: 300;
+    }
+}
+
+@media (max-width:677px) {
+    .cartOuter>.CartOneLine > h1{
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+}

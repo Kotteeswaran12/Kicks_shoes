@@ -24,7 +24,7 @@ function ProdCards() {
                                 state: prod
                             })
                             window.scrollTo(0, 0);
-                        }}>View Product - <span>{prod.price}</span></button>
+                        }}>View Product - <span>${prod.price}</span></button>
                     </div>)
 
                 })
